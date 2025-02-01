@@ -1,8 +1,19 @@
-exports.ekNames = [
+export const ekNames = [
   {
     name: 'Saphala',
     name_ru: 'Ca-пхала Экадаши',
-    description: '',
+    description:
+      'When Maharaja Yudhishthira asked Lord Krishna to tell him about Saphala Ekadashi, Lord Krishna first expressed how pleased He was when His devotees observed Ekadashi and requested Yudhishthira to listen very carefully.\n' +
+      '\n' +
+      'First, the Lord stated that according to circumstances, on Saphala Ekadashi, a person should offer Him fresh fruits, incense, and lamps with ghee, and, if possible, stay awake throughout the night, chanting the glories of the Lord. Then Krishna described the results of observing Saphala Ekadashi:\n' +
+      '\n' +
+      "\"There once lived a saintly ruler, King Mahishmata. Unfortunately, his eldest son, Lumpaka, led a degraded life. He sinned with prostitutes and other men's wives, gambled, and criticized the demigods, brahmanas, and Vaishnavas. Eventually, King Mahishmata exiled Lumpaka to the forest. Living there, Lumpaka spent his days killing animals and his nights plundering his father's city. He survived only on raw meat and fruits, dwelling beneath an old banyan tree, which happened to be very dear to Lord Vasudeva.\n" +
+      '\n' +
+      'Meanwhile, the day before Saphala Ekadashi arrived. That night was so cold that Lumpaka could not sleep at all and fell into a semi-conscious state until noon on Ekadashi. By that time, he was extremely weak and could not hunt any animals. Wandering in distress, at sunset, Lumpaka found some fallen fruits, which he took back to the banyan tree. In utter despair, he called out to Lord Hari (Krishna), begging Him to mercifully accept his offering of forest fruits.\n' +
+      '\n' +
+      'When night fell, Lumpaka once again could not sleep. Thus, he unknowingly observed the Ekadashi fast in full and pleased the Lord with his offering. At sunrise the next day, a divine voice told Lumpaka that, by the mercy of the Lord and due to the merits he had earned through fasting and keeping vigil on Saphala Ekadashi, he was now allowed to return to his kingdom on a celestial horse that awaited him.\n' +
+      '\n' +
+      'Lumpaka returned home and humbly bowed before his father. All royal regalia and wealth were restored to him. He sincerely accepted his royal duties and became a pure devotee of the Lord. Seeing these astonishing changes, his father, Mahishmata, joyfully handed over the reins of the kingdom to his son, who ruled without obstruction for many years. In his old age, Lumpaka passed the kingdom to his own son and retired to the forest to immerse himself even more in Krishna. Freed from all material desires, he left his body and attained shelter at the lotus feet of Lord Krishna."',
     description_ru:
       'Когда Махараджа Юдхиштхира попросил Господа Кришну рассказать о Сапхала экадаши, Господь Кришна прежде всего сказал, что Ему доставляет большое удовольствие, когда Его преданные соблюдают экадаши, и попросил Юдхиштхиру слушать очень внимательно.\n' +
       'Сначала Господь сказал, что в соответствии с обстоятельствами, в Сапхала экадаши человек должен предлагать Ему свежие фрукты, благовония и лампадки с гхи, и, если возможно, бодрствовать на протяжении всей ночи, воспевая славу Господа. Затем Кришна рассказал о результатах соблюдения\n' +
@@ -15,7 +26,32 @@ exports.ekNames = [
   {
     name: 'Putrada',
     name_ru: 'Путрада Экадаши',
-    description: '',
+    description:
+      'The glory of Putrada Ekadashi, which falls during the waxing moon of the month of December/January, is described in the Bhavishya Uttara Purana. In response to Maharaja Yudhishthira’s inquiry, Lord Krishna stated that everyone should observe Putrada Ekadashi in the best possible way, as it frees one from all sins, and by following this Ekadashi, people attain knowledge and fame.\n' +
+      '\n' +
+      'Then Krishna narrated the following story.\n' +
+      '\n' +
+      'Once upon a time, there existed a city called Bhadravati. This city was ruled by a king named Suketuman. His queen was named Shaibya. Since they had no son, they felt very unhappy.\n' +
+      '\n' +
+      'They devoted most of their time to religious rituals. The water that the king and queen offered to their ancestors seemed hot to them. Moreover, their ancestors were troubled, knowing that if King Suketuman remained childless, there would be no one to make offerings for them. Aware of the sorrow of his ancestors, the king grieved even more. He found no joy in the company of his friends, well-wishers, and advisors.\n' +
+      '\n' +
+      'In the king’s opinion, life without a son was meaningless. One cannot be freed from debts to the demigods, ancestors, and other beings without a son. Considering sons and grandsons to be the result of worshiping Lord Vishnu in previous lives, the king, being without an heir, was fearful day and night.\n' +
+      '\n' +
+      'He even contemplated suicide but knew that such an act would only lead to suffering in hellish worlds.\n' +
+      '\n' +
+      'Eventually, the sorrowful king secretly left for the forest on horseback.\n' +
+      '\n' +
+      'In the dense forest, King Suketuman saw various trees—banyan, pipal, date, tamarind, palm, shala, maulasiri, saptaparna, tilaka, tamala, sarala, hingota, arjuna, lavera, baheda, salaki, patala, katechu (betel), and palasha—bearing fruits. He also encountered different animals, such as tigers, lions, wild elephants, deer, wild boars, monkeys, snakes, leopards, and hares. Seeing these animals reminded him of his beloved palace animals and elephants; all of them were with their mates and offspring. The forest was also filled with various birds. As he wandered, the king was both frightened and amazed by the howls of jackals and the cries of owls.\n' +
+      '\n' +
+      'By noon, the king was extremely exhausted, suffering from hunger and thirst, and greatly afraid. He thought:\n' +
+      '"Why, despite having satisfied the demigods through worship and sacrifices, taken care of my subjects as if they were my own children, and pleased the brahmanas by offering them food and dakshina (donations), am I suffering like this today?"\n' +
+      '\n' +
+      'Despite his numerous good deeds and devotional service to the Lord, he felt oppressed by some unknown sin. Absorbed in such thoughts, King Suketuman continued wandering aimlessly.\n' +
+      '\n' +
+      'Suddenly, he came across a lake, as beautiful as Manasa Sarovar (the lake in Vrindavan), filled with lotuses. Numerous swans, chakravaka birds, and chakora birds played in its waters. Along its shores were ashrams inhabited by many great sages. Some sages sat by the lake, reciting Vedic mantras. The king dismounted from his horse and respectfully bowed before each of them individually.\n' +
+      '\n' +
+      'The sages were pleased with the king’s demeanor and said to him:\n' +
+      '"O King, we are pleased with you; please ask us for a boon."',
     description_ru:
       'Слава Путрада экадаши, который приходится на период прибывающе луны месяца декабря/ января, описывается в «Бхавишья Уттара Пуране». В ответ на вопрос Махараджи Юдхиштхиры Господь Кришна сказал, что каждому нужно соблюдать Путрада Экадаши наилучшим образом, так как он освобождает от всех грехов, и следуя этому экадаши, люди приобретают знания и славу.\n' +
       'Затем Кришна рассказал следующую историю.\n' +
@@ -33,7 +69,54 @@ exports.ekNames = [
   {
     name: 'Sat-tila',
     name_ru: 'Шат-тила Экадаши',
-    description: '',
+    description:
+      'This Ekadashi falls during the waning moon of the month of January/February. The glory of Shat-Tila Ekadashi is described in the *Bhavishya Uttara Purana*.\n' +
+      '\n' +
+      'One day, Dalbhya Rishi asked the sage Pulastya Muni:  \n' +
+      '*"O revered Brahmana, people commit various sinful acts—killing Brahmanas and indulging in sense gratification in this transient world. Please explain how they can be saved from the hellish realms that they enter due to their sins."*\n' +
+      '\n' +
+      'The sage Pulastya replied:  \n' +
+      '*"O most fortunate one! On the day of Shat-Tila Ekadashi, a person should worship the Supreme Lord, praying as follows:  \n' +
+      "'O Lord Janardana! O most merciful Lord Krishna, You are the savior of sinners. Please be merciful to those who are drowning in the ocean of material existence. O Supreme Brahman! O Supreme Personality of Godhead! O Lord of the universe! Please accept my worship, and may Your consort, Goddess Lakshmi, also accept it.'”  \n" +
+      '\n' +
+      "After offering prayers to the Lord, one should worship the Brahmanas by gifting them canopies, clothes, footwear, and pots of water. According to one's ability, one should also offer a black cow and sesame seeds to the best of Brahmanas. By donating sesame seeds, a person earns the opportunity to reside in the heavenly realms for many years.  \n" +
+      '\n' +
+      "On this Ekadashi, one should bathe in water mixed with sesame seeds, apply sesame paste to the body, perform fire sacrifices with sesame seeds, offer water mixed with sesame seeds to one's ancestors, consume sesame seeds, and generously distribute sesame seeds to others. By performing these acts, all sinful reactions are destroyed.  \n" +
+      '\n' +
+      'Therefore, this Ekadashi is called *Shat-Tila* (*Sanskrit*: "tila" means sesame) Ekadashi."  \n' +
+      '\n' +
+      'Pulastya Muni also narrated a story that was once witnessed by Lord Krishna Himself.  \n' +
+      '\n' +
+      'When Narada Muni desired to hear from Krishna about the glories and results of observing Shat-Tila Ekadashi, Lord Krishna told him the following story:  \n' +
+      '\n' +
+      '*"In ancient times, there lived a Brahmini (a woman from the priestly caste). She strictly observed the vow of Ekadashi and worshiped the Lord. By constantly following various vows in her worship, she became weak and emaciated. Although she gave gifts to poor Brahmanas and unmarried girls, she never offered grains to the Brahmanas and demigods. Due to her severe austerities, her body became frail, but she remained pure in heart. However, she never donated grains to the hungry.  \n' +
+      '\n' +
+      "O best of Brahmanas! Wishing to test this Brahmini, I took the form of a beggar and descended into this material world. With a begging bowl in My hands, I arrived at the woman's house.  \n" +
+      '\n' +
+      'The woman said: ‘O Brahmana! Please tell me, from where have you come?’ I pretended not to hear her and again asked for alms. The woman became angry, grabbed a handful of clay, and placed it in My begging bowl. After this, I returned to My abode."  \n' +
+      '\n' +
+      'Due to her austerities, the Brahmini also reached My abode. She was given a beautiful house, which was a transformation of the very clay she had offered Me. However, like the clay, the house was devoid of grains and any furnishings.  \n' +
+      '\n' +
+      'O Brahmana! Upon entering the house, she found nothing inside. Lacking wealth, the woman lost her peace of mind. She approached Me and angrily said:  \n' +
+      '‘O Janardana! I performed severe austerities, observed vows, and worshiped Lord Vishnu. Then why am I deprived of grains and wealth?’  \n' +
+      '\n' +
+      'I replied to the woman: ‘O Brahmini! You have come here from the material world, and now, please return home. When, out of curiosity, the wives of the demigods visit your house for *darshan* (a spiritual meeting), you must ask them about the glories of Shat-Tila Ekadashi. Do not open the door until they have completed their narration.’  \n' +
+      '\n' +
+      'Hearing My words, the Brahmini returned home.  \n' +
+      '\n' +
+      'One day, as the Brahmini sat in her room with the door locked from the inside, the wives of the demigods arrived. They said:  \n' +
+      '‘O beautiful one! We have come here to receive *darshan*. Please open the door.’  \n' +
+      '\n' +
+      'The Brahmini replied:  \n' +
+      '‘If you wish to see me, then please narrate to me the significance and glories of Shat-Tila Ekadashi and the merit associated with observing it before I open the door.’  \n' +
+      '\n' +
+      'Then, one of the wives of the demigods spoke about the glories of this Ekadashi. After hearing the narration, the Brahmini was satisfied and opened the door for them. Seeing the Brahmini, the wives of the demigods felt great joy.  \n' +
+      '\n' +
+      'Following the instructions of these celestial women, the Brahmini observed the vow of Shat-Tila Ekadashi. As a result, she became a radiant, prosperous woman with an abundance of grains, wealth, and gold.  \n' +
+      '\n' +
+      'If a person observes this Ekadashi, their misfortunes and poverty vanish. If one donates sesame seeds on this day, all the consequences of their sinful actions are destroyed. However, no one should observe this Ekadashi out of greed. One should observe Shat-Tila Ekadashi selflessly, without expecting anything in return."  \n' +
+      '\n' +
+      'In conclusion, Pulastya Muni stated that if a person observes this Ekadashi with faith, without personal mental speculation, and according to their capacity donates clothes, food, or sesame seeds—either as charity or for their own consumption—they are freed from all spiritual, mental, physical, social, and intellectual suffering. They develop spiritual consciousness and ultimately return to God."',
     description_ru:
       'Этот экадаши приходится на период убывающей луны месяца января/февраля. Слава Шат-тила экадаши описана в «Бхавишья Уттара Пуране».\n' +
       'Однажды Далбхья риши задал мудрецу Пуластье муни вопрос: «О, уважаемый брахман, люди совершают различные греховные поступки - убивают брахманов и услаждают свои чувства в этом бренном мире. Пожалуйста, объясни мне, как они могут спастись от ада, в который они попадают в результате своих грехов?»\n' +
@@ -59,7 +142,55 @@ exports.ekNames = [
   {
     name: 'Bhaimi',
     name_ru: 'Джая (Бхаими) Экадаши',
-    description: '',
+    description:
+      'The glory of Jaya (Bhaimi) Ekadashi, which falls during the waxing moon of the month of January/February, is described in the *Bhavishya Uttara Purana* in the conversation between Lord Krishna and Maharaja Yudhishthira.\n' +
+      '\n' +
+      'One day, Maharaja Yudhishthira asked Lord Krishna:  \n' +
+      '*"O Original Personality of Godhead, O Lord of the universe, Sri Krishna! You are the primal source of the four types of living beings—those born from perspiration, those born from seeds, those born from eggs, and those born from embryos. You alone create, maintain, and destroy all existence. Please describe to me the glories of the Ekadashi that falls during the waxing moon of the month of January/February. Also, please explain the observance of this Ekadashi and tell me which deity should be worshiped on this auspicious day."*\n' +
+      '\n' +
+      'Lord Krishna replied:  \n' +
+      "*\"O best of kings, Yudhishthira! This Ekadashi is celebrated as Jaya (*Sanskrit*: 'glory') Ekadashi. Observing this Ekadashi removes all sinful reactions. A person who follows this Ekadashi never takes birth as a ghost.  \n" +
+      '\n' +
+      'O King! This Ekadashi is unparalleled in its ability to grant liberation and eradicate the consequences of sinful actions. O King, like a lion among men, now hear of an ancient episode that I have already narrated in the *Padma Purana*.\n' +
+      '\n' +
+      'The demigods happily resided in the celestial kingdom of Indra. In the fragrant Nandana Kanana forest, filled with the aroma of blooming *Parijata* flowers, where celestial dancers (*Apsaras*) played, the king of the heavens, Indra, enjoyed their company. One day, in high spirits, Indra organized a grand festival attended by fifty million Apsaras.\n' +
+      '\n' +
+      'At that gathering, the chief musician was present along with his wife and son, whose name was Malyavan. Among them was an extraordinarily beautiful celestial dancer named Pushpavati. She became captivated by the handsomeness of Malyavan, struck by Cupid’s sharp arrows. Through gestures and glances, Pushpavati tried to win Malyavan’s heart, and he, too, was mesmerized by her beauty.\n' +
+      '\n' +
+      'O King! How can I describe to you the breathtaking beauty of Pushpavati? Her graceful arms were like the ropes of Cupid, her face radiated like the moon, her eyes were wide, her ears adorned with dazzling earrings, her waist was slender, her chest was prominent, and her broad hips resembled a banana tree. Her shining feet outshone the beauty of red lotuses. Her delicate limbs appeared even more enchanting, adorned with luxurious ornaments and fine clothing.\n' +
+      '\n' +
+      'Wishing to please Indra, Malyavan and Pushpavati joined the other Apsaras in singing and dancing. However, due to their mutual attraction, they were unable to perform properly.\n' +
+      '\n' +
+      'Their overwhelming infatuation completely ruined the musical presentation. When Indra realized what was happening, he became furious. He felt that they were mocking him during the performance, whereas in reality, they were simply lost in each other’s love. Feeling insulted, Indra declared:  \n' +
+      '*"You are foolish and sinful! You have disobeyed me, so I curse you. You will become a male and female ghost and be born on Earth, where you will suffer the consequences of your karma!"*\n' +
+      '\n' +
+      'Instantly, Malyavan and Pushpavati fell from heaven into the freezing heights of the Himalayas. Cursed as ghosts, they took on ethereal bodies and began living a miserable existence in the caves of the Himalayan mountains.\n' +
+      '\n' +
+      'Because they were trapped in ghostly bodies, they experienced despair and sorrow. Under the influence of the curse, they could not enjoy scents, touch, or sleep. Stumbling about, they wandered in the icy wilderness, their teeth constantly chattering and their hair standing on end from the piercing cold.\n' +
+      '\n' +
+      'One day, they sat down and began to reflect. The male ghost said to the female ghost:  \n' +
+      '*"Alas, what terrible deeds have we committed that we are now suffering in these miserable ghostly forms?"*  \n' +
+      '\n' +
+      'Thus, they repented for their sins. At that time, the auspicious day of Jaya Ekadashi arrived, which is observed on the waxing moon of January/February. Although the ghosts were tormented by hunger and thirst, they naturally could not hunt for any food. Likewise, they could not consume roots, fruits, or water.\n' +
+      '\n' +
+      'O King! As the ghostly couple sat beneath a banyan tree, the sun began to set. Due to the cold and their sorrowful thoughts, they remained awake the entire night. Since their minds were disturbed, they had no desire for sense gratification.  \n' +
+      '\n' +
+      'O King, whose heart is as bold as a lion! In this way, without realizing it, they observed the vow of Jaya Ekadashi. As a result of the merit they unknowingly acquired, the very next day they were freed from their ghostly forms.\n' +
+      '\n' +
+      'Afterward, Pushpavati and Malyavan ascended to the celestial realms on an aerial chariot. There, they approached Indra, the king of the demigods, and offered him their obeisances. Seeing them, Indra was astonished and said:  \n' +
+      '*"What a wonder! By what merit have you been freed from being ghosts? Which demigod has released you from my curse?"*\n' +
+      '\n' +
+      'Malyavan replied to him:  \n' +
+      '*"By the causeless mercy of the Supreme Lord and as a result of observing the vow of Jaya Ekadashi, we have been freed from the curse. O Lord! I declare with absolute certainty that we have been delivered from our ghostly forms simply by engaging in devotional service."*\n' +
+      '\n' +
+      'Hearing these words, Indra said to Malyavan:  \n' +
+      '*"You have been purified because you performed devotional service to Lord Vishnu (Krishna) and observed the vow of Ekadashi. Therefore, now you are worthy of my worship as well. Those who engage in devotional service to Lord Vishnu are undoubtedly the objects of my veneration."*  \n' +
+      '\n' +
+      'Malyavan and Pushpavati then lived happily in heaven.\n' +
+      '\n' +
+      'O King Yudhishthira! One must observe this Ekadashi. Observing the vow of Jaya Ekadashi absolves even the sin of killing a Brahmana. Moreover, by following this vow, one automatically attains the merits of charity, sacrifices, and pilgrimage. If one properly observes this Ekadashi with faith and devotion, they become an eternal resident of Vaikuntha (the spiritual world).  \n' +
+      '\n' +
+      'Simply by reading about or hearing the glories of this Ekadashi, one receives the merits of performing the *Agniṣṭoma* sacrifice."',
     description_ru:
       'Слава Джая (Бхаими) экадаши, который приходится на период растущей луны в месяце январе/ феврале, описана в «Бхавишья Уттара Пуране» в беседе Господа Кришны и Махараджи Юдхиштхиры.\n' +
       'Однажды Махараджа Юдхиштхира спросил Господа Кришну: «О, изначальная Личность Бога, о,\n' +
@@ -83,7 +214,56 @@ exports.ekNames = [
   {
     name: 'Vijaya',
     name_ru: 'Виджая Экадаши',
-    description: '',
+    description:
+      'The glory of this Ekadashi is described in the *Skanda Purana*. One day, Maharaja Yudhishthira approached Lord Krishna and said:  \n' +
+      '*"O Krishna, please be kind to me and describe the Ekadashi that falls during the waning moon of the month of February/March."*\n' +
+      '\n' +
+      'Lord Krishna replied:  \n' +
+      '*"O King Yudhishthira! I will gladly tell you about the Ekadashi known as Vijaya Ekadashi. By observing this Ekadashi, the consequences of sinful actions are immediately destroyed.  \n' +
+      '\n' +
+      'Once, the great sage Narada approached Lord Brahma, the creator of the universe, and asked:  \n' +
+      "'O best among the demigods! Please tell me about the results obtained by observing the vow of Vijaya Ekadashi, which is observed during the waning moon of February/March.'  \n" +
+      '\n' +
+      'Lord Brahma replied:  \n' +
+      "'My dear son, this ancient vow is pure and eradicates all sins. Its results are great, as indicated by its very name. Without a doubt, this Vijaya (*Sanskrit*: victory) Ekadashi grants one the power to be victorious.  \n" +
+      '\n' +
+      'Fulfilling his father’s promise, Lord Ramachandra, in His renowned incarnation, spent fourteen years in exile with His wife, Sita Devi, and His younger brother, Lakshmana. For some time, they lived in the beautiful forest known as Panchavati, located on the banks of the Godavari River. The ascetic Sita Devi was abducted by Ravana, the king of the demons. Wandering through the forest in search of Sita, Ramachandra met Jatayu, the king of birds.  \n' +
+      '\n' +
+      'Jatayu had tried to stop Ravana and sacrificed his life. Before departing for the spiritual world, as he lay dying, he told Ramachandra that Ravana had taken Sita on an aerial chariot to Lanka (Sri Lanka).  \n' +
+      '\n' +
+      "Then Ramachandra befriended Sugriva, the king of the monkeys. Wishing to assist Ramachandra's mission, numerous monkey soldiers, along with bears, formed an army. Hanuman, the valiant monkey warrior, reached the Ashoka grove in Lanka, where he found Sita Devi under heavy guard and delivered Ramachandra’s ring to her. Then Hanuman returned to Ramachandra and conveyed the news.  \n" +
+      '\n' +
+      'Ramachandra resolved to invade Lanka. Gathering a great army of monkey soldiers, He arrived at the shore of the ocean. He asked Lakshmana:  \n' +
+      '*"O Saumitri! How can we cross this boundless ocean, which is dangerous and filled with fierce creatures?"*  \n' +
+      '\n' +
+      'Lakshmana replied:  \n' +
+      '*"O Supreme Personality of Godhead! You are the original Lord. On an island nearby, there lives a great sage named Bakadalbhya. His ashram is four miles from here. O scion of the Raghu dynasty! This sage is so ancient that he has witnessed the appearance and disappearance of numerous Brahmas (one lifetime of Brahma spans millions of human years). We should ask him how to cross the ocean."*  \n' +
+      '\n' +
+      'Following Lakshmana’s advice, Lord Ramachandra went to Bakadalbhya’s ashram and offered Him respectful obeisances. The omniscient sage immediately recognized that the Supreme Personality of Godhead, Sri Ramachandra, had appeared before him. He knew that the Lord had manifested in this material world to set an example of righteousness and to slay the demon Ravana. The great sage asked:  \n' +
+      '*"O Ramachandra, for what purpose have You come to my humble ashram?"*  \n' +
+      '\n' +
+      'Ramachandra replied:  \n' +
+      '*"O Brahmana! By Your mercy, I have arrived here at the shore of the ocean with My soldiers. I wish to battle the demons and conquer Lanka. O greatest of sages! Please tell Me a simple means by which I can cross this ocean. That is the only reason I have come to Your lotus feet."*  \n' +
+      '\n' +
+      'The great sage said to Ramachandra:  \n' +
+      '*"O Ramachandra! I will tell You about the observance of a great vow by which You will be victorious in battle and gain eternal fame and prosperity in this world. You must follow this vow very carefully.  \n' +
+      '\n' +
+      'O Rama! There is an Ekadashi known as Vijaya, which falls in the month of February/March. By observing this Ekadashi, You will be able to cross the ocean along with Your monkey soldiers.  \n' +
+      '\n' +
+      'O Lord Ramachandra! Now please hear about the process of observing this Ekadashi.  \n' +
+      '\n' +
+      'On the day before Ekadashi, You should fill a golden, silver, copper, or clay vessel with water and decorate it with mango twigs. Then place this vessel on a sanctified high altar, adorned with grains of seven kinds. After that, place a golden deity of Lord Narayana upon the vessel.  \n' +
+      '\n' +
+      'On the day of Ekadashi, early in the morning, You should take a sacred bath and worship the deity of Lord Narayana with devotion, offering tulasi leaves, sandalwood paste, flowers, garlands, incense, a ghee lamp, and food. You should fast and remain awake throughout the night.  \n' +
+      '\n' +
+      'On the day after Ekadashi, at sunrise, take the vessel to the bank of a river, pond, or lake, and offer it proper worship. Then donate both the vessel and the deity of Narayana to a Brahmana who strictly observes celibacy. By performing this vow, You will undoubtedly triumph over Your enemies and be glorified for all time."*  \n' +
+      '\n' +
+      'Following the instructions of this great sage, Lord Ramachandra set the perfect example by observing this Ekadashi vow. Afterward, He built the famous bridge across the ocean and defeated the demon Ravana, liberating the island of Lanka and rescuing His wife, Sita Devi. This victory has been celebrated and glorified since time immemorial.  \n' +
+      '\n' +
+      'A person who properly observes this Ekadashi vow (at the very least by refraining from consuming grains and pulses) will undoubtedly achieve success both in this life and the next.  \n' +
+      '\n' +
+      'Lord Brahma continued, addressing Narada:  \n' +
+      '*"O my dear son! Therefore, every person should follow the vow of this Vijaya Ekadashi. The glory of Vijaya Ekadashi destroys all sinful reactions. A person who reads or hears about the glory of this Ekadashi obtains the results of performing the *Vajapeya* sacrifice (the greatest of all sacrifices for attaining material prosperity)."*',
     description_ru:
       'Слава этого экадаши описана в «Сканда Пуране». Однажды Махараджа Юдхиштхира обратился к Господу Кришне: «О, Кришна, пожалуйста, будь добр ко мне и опиши тот экадаши, что приходится на период убывающей луны в месяце феврале/марте».\n' +
       'Господь Кришна ответил: «О, царь Юдхиштхира! Я буду счастлив рассказать тебе об экадаши, известном как Виджая экадаши. Благодаря соблюдению этого экадаши последствия греховных поступков сразу же разрушаются.\n' +
@@ -103,7 +283,68 @@ exports.ekNames = [
   {
     name: 'Amalaki vrata',
     name_ru: 'Амалаки Экадаши',
-    description: '',
+    description:
+      'The glory of Amalaki Ekadashi, which falls during the waxing moon of the month of February/March, is described in the *Brahmanda Purana*.  \n' +
+      '\n' +
+      'One day, King Mandhata approached the sage Vasishta and said:  \n' +
+      '*"O most fortunate one, if you are pleased with me and merciful to me, please tell me about a vow that, by following it, I may attain all that is auspicious."*  \n' +
+      '\n' +
+      'The sage Vasishta replied:  \n' +
+      '*"O King! Now I will tell you about the glory and history of a great vow, following which bestows upon a person the fullness of all blessings. O King! This vow is called *Amalaki* (*sacred tree*) *Vrata* (*Sanskrit*: vow) Ekadashi. The merits acquired by observing this Ekadashi undoubtedly destroy all sinful reactions, grant liberation, and yield the results of donating a thousand cows."*  \n' +
+      '\n' +
+      'In ancient times, there was a city named *Vaidisha*. Many healthy and prosperous Brahmanas, Kshatriyas, Vaishyas, and Shudras resided there. O King, whose heart is like that of a lion! In that magnificent city, there were no atheists or sinners. The city was filled with the sounds of Vedic mantras. In this glorious city lived a truthful and pious king named Chaitraratha, born in the family of King Pashabinduka, belonging to the lunar dynasty.  \n' +
+      '\n' +
+      'King Chaitraratha was a valiant, courageous, and generous ruler and well-versed in the scriptures. Because all the inhabitants of his kingdom engaged in devotional service to Lord Hari, they lived happily. There was not a single poor or suffering person in the entire kingdom.  \n' +
+      '\n' +
+      'Many years passed, and one day, Amalaki Ekadashi coincided with *Dvadashi* (the twelfth lunar day), which falls during the waning moon of the month of February/March.  \n' +
+      '\n' +
+      'Realizing that this Ekadashi brings great benefits, the king and his subjects decided to observe it according to all rules and prescriptions. Early in the morning on the day of Ekadashi, the king and his subjects bathed in the river and went to the temple of Lord Vishnu, situated on the riverbank.  \n' +
+      '\n' +
+      'Inside the temple stood the sacred *Amalaki* tree. Beneath this tree, the king placed a water vessel, along with an umbrella, clothing, footwear, and five types of jewels for worship. Then the king worshiped Lord Parashurama (Krishna, Vishnu) and the *Amalaki* tree, offering water, shoes, an umbrella, gold, diamonds, rubies, pearls, sapphires, and incense.  \n' +
+      '\n' +
+      'Then, led by sages and accompanied by his subjects, the king offered the following prayers to Lord Parashurama:  \n' +
+      '*"O Lord Parashurama! O son of Renuka! O You who reside under the shade of the Amalaki tree! O bestower of material pleasure and liberation! I offer my respectful obeisances to You."*  \n' +
+      '\n' +
+      'Then they prayed to the *Amalaki* tree:  \n' +
+      '*"O Amalaki! O tree that upholds the universe! O offspring of Lord Brahma! O destroyer of sins! We offer You our respectful obeisances! Please mercifully accept our offerings."*  \n' +
+      '\n' +
+      'After duly offering worship to the Lord and the *Amalaki* tree, the king and his subjects remained awake the entire night in the temple of Lord Vishnu. They sang songs and offered beautiful prayers, glorifying the Lord and the *Amalaki* tree.  \n' +
+      '\n' +
+      'At this time, by the will of providence, a sinful hunter arrived at the temple. This hunter sustained himself by killing various living beings. He entered the temple, adorned with ghee lamps, incense, and other auspicious items, and saw people staying awake and glorifying the Lord. Curious, he sat nearby and watched them.  \n' +
+      '\n' +
+      'The fortunate hunter received *darshan* (*Sanskrit*: divine vision) of Lord Damodara (Krishna, Vishnu), who was situated on top of a special vessel, and heard the transcendental narrations about Vishnu. Though he was tormented by hunger, he observed the events in amazement and remained awake the entire night, listening to the glories of Ekadashi.  \n' +
+      '\n' +
+      'The next morning, the king left the temple and returned to his palace with his entourage. The hunter also went home, feeling content, and ate.  \n' +
+      '\n' +
+      'Years later, the hunter left his body. Due to the influence of Amalaki Ekadashi and because he had stayed awake on the night of Ekadashi, in his next life, the hunter was born as a king and became the possessor of countless elephants, horses, chariots, and a vast army.  \n' +
+      '\n' +
+      'The hunter was reborn as *Vasuratha*, the powerful son of King Viduratha, the ruler of the famous city of *Jayanti*.  \n' +
+      '\n' +
+      'King Vasuratha ruled over a million villages. He shone like the sun, was radiant like the moon, as powerful as Lord Vishnu, and as patient as Mother Earth. The king was truthful, diligently performed his prescribed duties, and was a great devotee of Lord Vishnu.  \n' +
+      '\n' +
+      'One day, the kind and generous King Vasuratha became lost in the forest while hunting. He was utterly exhausted and hungry. Finding no way out, he lay on the ground in the thick jungle, using his arm as a pillow.  \n' +
+      '\n' +
+      'At that time, a group of *Mlecchas* (barbarians) who lived in that forest approached the king and began to torment him in various ways. Considering the king to be their enemy, they tried to kill him.  \n' +
+      '\n' +
+      'The *Mlecchas* believed that in the past, the king had killed their mothers, sons, and grandsons and had forced them to live a miserable life in the forest.  \n' +
+      '\n' +
+      'Accusing the king of such misdeeds, the *Mlecchas* took up their weapons and began beating him. However, to their great astonishment, their weapons could not even touch the king’s body, and he did not feel the slightest pain.  \n' +
+      '\n' +
+      'Having tried everything, the *Mlecchas* became disheartened and fearful. They could not move.  \n' +
+      '\n' +
+      'At that moment, a divine woman emerged from the king’s body. She was beautifully adorned and anointed with fragrant sandalwood paste. She wore an elegant flower garland, and her eyes were red with anger. Holding a fiery disc in her hand and with raised eyebrows, she furiously attacked the *Mlecchas*, intending to annihilate them.  \n' +
+      '\n' +
+      'Within a moment, all the *Mlecchas* were dead.  \n' +
+      '\n' +
+      'Then the king awoke. Seeing this terrifying scene, he became afraid and confused. Noticing that his dreadful enemies had been slain, the king was astonished and said:  \n' +
+      '*"Alas! Who is this well-wisher and friend who has saved my life by destroying my formidable enemies? I am deeply grateful to them for this act of kindness."*  \n' +
+      '\n' +
+      'Then a celestial voice was heard:  \n' +
+      '*"Who, other than Lord Keshava (Krishna, Vishnu), can protect His devoted soul? He alone is the protector of His devotees."*  \n' +
+      '\n' +
+      'Hearing this divine voice, the king was even more amazed, and his heart was filled with devotion.  \n' +
+      '\n' +
+      'After this, the king returned to his palace and ruled his kingdom like a second Indra (king of the heavens), without facing any obstacles.',
     description_ru:
       'Слава Амалаки экадаши, который выпадает на период растущей луны в месяце феврале/марте, описана в «Брахманда Пуране». Однажды царь Мандхата обратился к мудрецу Васиште: «О, самый удачливый, если ты будешь доволен мной и милостив ко мне, то расскажешь мне об обете, следуя которому, я смогу достичь всего благоприятного».\n' +
       'Мудрец Васиштха ответил: «О, царь! Сейчас я расскажу тебе о славе и истории великого обета, следование которому одаривает человека всей полнотой блага. О, царь! Этот обет зовется Амалаки (священное дерево) - врата (санскрит: обет) экадаши. Влияние заслуг, приобретаемых благодаря следованию этому экадаши, однозначно уничтожает последствия всех греховных поступков и приносит освобождение, а также даёт результат раздачи тысячи коров.\n' +
@@ -127,7 +368,80 @@ exports.ekNames = [
   {
     name: 'Papamocani',
     name_ru: 'Папамочани Экадаши',
-    description: '',
+    description:
+      'The glory of Papamochani Ekadashi is described in the *Bhavishottara Purana* in the conversation between Lord Krishna and Maharaja Yudhishthira.  \n' +
+      '\n' +
+      'One day, Maharaja Yudhishthira asked Lord Krishna:  \n' +
+      '*"My dear Lord Krishna, please tell me about the Ekadashi that occurs during the waning moon of the month of March/April. What is the name of this Ekadashi? What is the process of observing it, and what are its results?"*  \n' +
+      '\n' +
+      'Lord Krishna replied:  \n' +
+      '*"O best of kings! The name of this Ekadashi is *Papamochani* (*Sanskrit*: papa - sin). Now, please hear about its glories. This *Papamochani Ekadashi* destroys all sinful reactions and grants the eight types of mystical perfections.  \n' +
+      '\n' +
+      'Long ago, the sage Lomasha narrated the glories of this Ekadashi to King Mandhata. Sage Lomasha said:  \n' +
+      '\n' +
+      '‘In ancient times, Kubera, the treasurer of the demigods, owned a beautiful forest filled with flowers, known as *Chaitraratha*, where the weather was as pleasant as eternal spring. In this forest, *Gandharvas* and *Kinnaras* (celestial beings) would play joyfully. The demigods, led by Indra, often came to this forest to enjoy its beauty. Many sages, including *Medhavi*, the son of *Chyavana Rishi*, a dedicated devotee of Lord Shiva, performed penances and austerities in this sacred place.  \n' +
+      '\n' +
+      "One spring, King Indra arrived there with his entourage and entertainers. The *Apsaras*—celestial dancers—tried in various ways to distract and seduce the sages. The most beautiful and skilled of Indra's dancers, the famous *Apsara Manjughosa*, desired to enchant the exalted young sage Medhavi.  \n" +
+      '\n' +
+      'Manjughosa built a small hut near the sage’s ashram and began singing sweet songs while playing the *Veena* (a stringed musical instrument). The distant sounds were so enchanting that even Cupid (*Kamadeva*, the god of love) himself was captivated by her singing and music.  \n' +
+      '\n' +
+      'Since Lord Shiva had previously burned Cupid to ashes for disturbing his meditation, Cupid now sought revenge by making Lord Shiva’s devotee, Medhavi, break his vows.  \n' +
+      '\n' +
+      'Manjughosa gradually approached the sage, anointed with sandalwood paste, adorned with a fragrant flower garland, and singing melodiously. She appeared extraordinarily attractive. At the moment Medhavi realized that this exquisite woman desired intimacy with him, Cupid entered his body and unleashed his full power of attraction.  \n' +
+      '\n' +
+      'At that time, Sage Medhavi, with his sacred white thread across his chest, appeared like a second Cupid himself. Overcome with lust, Manjughosa slowly approached the sage. Her scent, her voice, and her gaze completely overwhelmed Medhavi’s senses, sweeping away his purity and innocence and drawing him into pleasure with her.  \n' +
+      '\n' +
+      'The sage Medhavi lost control due to lust and forgot the Lord to whom he had been devoted. He abandoned his practice of devotional service and was so intoxicated by the company of this beautiful woman that he lost all sense of time. Thus, the sage spent many years with the *Apsara*.  \n' +
+      '\n' +
+      'When Manjughosa was certain that he had completely fallen, she decided to leave the fallen sage and return to the heavens. She said to Medhavi, who was still absorbed in their relationship:  \n' +
+      '*"O great sage! Now, please give me permission to return home."*  \n' +
+      '\n' +
+      'The sage replied:  \n' +
+      '*"O beautiful woman! You came to me just to stay here for one night, but with the arrival of morning, you may return."*  \n' +
+      '\n' +
+      'Fearing the power of the sage, Manjughosa agreed and stayed with him.  \n' +
+      '\n' +
+      'Thus, although Manjughosa had remained with the sage for *fifty-seven years, nine months, and three days*, the sage felt as if only half a night had passed.  \n' +
+      '\n' +
+      'Then, once again, Manjughosa asked the sage for permission to return home, but the sage protested:  \n' +
+      '*"O beautiful one! Please listen to me. It is still morning. We have been together for only one night. Please wait until I finish my morning rituals."*  \n' +
+      '\n' +
+      'Astonished, Manjughosa smiled and said to the sage:  \n' +
+      '*"O great sage! How much time do you need to complete your rituals? Have you not yet finished them? In truth, while we were together, more than fifty-seven years have passed. You have spent many years enjoying my company. Please realize how precious time is."*  \n' +
+      '\n' +
+      'Hearing these words from the *Apsara*, the sage regained his senses. Realizing how much time had passed, he was shocked and exclaimed:  \n' +
+      '*"Alas! O beautiful one! I have wasted fifty-seven precious years of my life. You have been the cause of the downfall of all my austerities."*  \n' +
+      '\n' +
+      'Tears filled the sage’s eyes, and his entire body trembled with anger. The sage Medhavi cursed Manjughosa, saying:  \n' +
+      '*"You have acted like a witch, and therefore, you shall immediately become a witch, a ghostly being. O sinful woman! May you be cursed!"*  \n' +
+      '\n' +
+      'Being cursed by the sage, Manjughosa humbly pleaded for his forgiveness:  \n' +
+      '*"O best of Brahmanas! Please revoke your curse. After all, I have been your companion for so long. O my lord, you must forgive me."*  \n' +
+      '\n' +
+      'Realizing that he was now powerless, the sage replied:  \n' +
+      '*"O graceful one! What can I do now? You have ruined all my accumulated austerities. However, I will tell you about a practice through which you can be freed from this curse.  \n' +
+      '\n' +
+      'The Ekadashi that falls during the waning moon of the month of March/April, known as *Papamochani*, has the power to destroy all sinful reactions. If you faithfully observe this Ekadashi, your suffering will come to an end."*  \n' +
+      '\n' +
+      'Saying this, the sage Medhavi returned to the ashram of his spiritual father, Sage Chyavana. Seeing his fallen son, Sage Chyavana was saddened and said:  \n' +
+      '*"Alas! Alas! O my son, what have you done? You should not have destroyed all your accumulated austerities by falling for an ordinary woman!"*  \n' +
+      '\n' +
+      'Sage Medhavi replied:  \n' +
+      '*"O revered father! I was so unfortunate that I committed great sins in the company of an *Apsara*. Therefore, please give me instructions and tell me how I can atone for my sins."*  \n' +
+      '\n' +
+      'Hearing his repentant son’s words, Sage Chyavana said:  \n' +
+      '*"O my son! By observing *Papamochani Ekadashi*, which falls during the waning moon of the month of March/April, all sinful reactions are completely destroyed. Therefore, you must observe this Ekadashi."*  \n' +
+      '\n' +
+      'Upon hearing these compassionate words from his spiritual father, Medhavi gratefully observed this Ekadashi with great enthusiasm. By the power of this Ekadashi, all his sinful reactions were destroyed, and Sage Medhavi became exceptionally virtuous.  \n' +
+      '\n' +
+      'At that time, the beautiful Manjughosa also observed the auspicious *Papamochani Ekadashi*, and as a result, she was freed from her curse and returned to the heavenly planets.  \n' +
+      '\n' +
+      'After narrating this story to King Mandhata, Sage Lomasha concluded:  \n' +
+      '*"My dear King, by observing this Ekadashi, all sinful reactions are automatically destroyed. By hearing or reading about the glories of this Ekadashi, one attains the merit of donating a thousand cows.  \n' +
+      '\n' +
+      'By observing this Ekadashi, all types of sins, including *Brahmana-hatya* (killing a Brahmana), *Bhrun-hatya* (killing an embryo), intoxication, and adultery with the wife of a guru, are completely neutralized.  \n' +
+      '\n' +
+      'Since this sacred Ekadashi is so auspicious and destroys all sins, everyone should observe it."*',
     description_ru:
       'Слава Папамочани экадаши описана в «Бхавишоттара Пуране» в беседе Господа Кришны и\n' +
       'Махараджа Юдхиштхиры.\n' +
@@ -162,7 +476,53 @@ exports.ekNames = [
   {
     name: 'Kamada',
     name_ru: 'Камада Экадаши',
-    description: '',
+    description:
+      'The glory of *Kamada Ekadashi* is described in the *Varaha Purana*, in a conversation between Lord Krishna and Maharaja Yudhishthira.\n' +
+      '\n' +
+      'One day, Maharaja Yudhishthira approached Lord Krishna, the crown jewel of the Yadu dynasty, and said:  \n' +
+      '*"O Lord Vasudeva! Please accept my humble obeisances. Kindly describe the Ekadashi that falls during the waxing moon of the month of March/April. Also, please reveal to me the process of observing this Ekadashi and the benefits it bestows."*  \n' +
+      '\n' +
+      'Lord Krishna replied:  \n' +
+      '*"My dear Maharaja Yudhishthira, please listen attentively to the description of this Ekadashi as found in the *Varaha Purana*.\n' +
+      '\n' +
+      'Once, Maharaja Dilipa, the great-grandfather of Lord Ramachandra, asked his spiritual master, Sage Vasishta, about the name and observance of the Ekadashi that falls during the waxing moon of the month of March/April.  \n' +
+      '\n' +
+      'Sage Vasishta replied:  \n' +
+      '\'O King! I shall certainly fulfill your request. The name of this Ekadashi is *Kamada* (*Sanskrit*: "desire-fulfilling"). This sacred Ekadashi burns to ashes all the consequences of sinful actions. It grants supreme qualities and blesses the observer with the privilege of obtaining a son.  \n' +
+      '\n' +
+      'Long ago, there was a city called *Ratnapura* (also known as *Bhogipura*). This magnificent city was ruled by a king named *Pundarika*. In this kingdom, celestial serpents (*Nagas*), along with divine artists such as *Gandharvas*, *Kinnaras*, and *Apsaras*, lived together in harmony. Among them were a beautiful *Apsara* (celestial dancer) named *Lalita* and an attractive *Gandharva* (celestial musician) named *Lalit*. They were husband and wife and spent their time joyfully engaged in various forms of entertainment in their splendid residence. Their love for each other was so intense that they could not bear even a moment of separation.  \n' +
+      '\n' +
+      'One day, at the court of King Pundarika, many *Gandharvas* were singing and dancing, and Lalit also performed, but without his wife. Because Lalita was not present, Lalit’s voice, melody, steps, and words were imperfect. He was so distracted by thoughts of his wife that he sang out of tune and mistimed his performance.  \n' +
+      '\n' +
+      'Among the audience was a *Naga* (serpent) named *Karkotaka*, who understood the cause of Lalit’s poor performance. He approached King Pundarika and whispered to him that Lalit had ruined the performance because he was thinking about his wife. The king became extremely angry and cursed Lalit:  \n' +
+      '*"O sinful one! O fool! Being a slave to lust, you have disrupted the music and dance. Therefore, I curse you to become a flesh-eating cannibal."*  \n' +
+      '\n' +
+      'O best of kings, cursed by King Pundarika, Lalit immediately transformed into a gigantic *Rakshasa* (man-eating demon). When Lalita saw her husband in such a terrifying form, she was devastated. Despite this, she faithfully followed him into the deep jungle, where he wandered, engaging in dreadful acts of cannibalism. Lalita wept bitterly in despair, unsure of what to do or where to go.  \n' +
+      '\n' +
+      'One day, while wandering in the dense forest, they came upon the sacred ashram of Sage *Shringi*, situated atop the *Vindhya* mountains. Lalita immediately approached the sage and offered him respectful obeisances. Seeing her, the sage inquired:  \n' +
+      '*"O beautiful lady, who are you? Whose daughter are you? Why have you come here?"*  \n' +
+      '\n' +
+      'Lalita replied:  \n' +
+      '*"O great soul, I am the daughter of the *Gandharva* named *Viradhanva*. My name is *Lalita*. I have come here with my cursed husband. O great sage! My husband has been turned into a demon due to the curse of King Pundarika, the ruler of the *Gandharvas*.  \n' +
+      '\n' +
+      'O Brahmana! I am deeply distressed, seeing his terrifying and monstrous form. O my Lord! Please tell me a process of atonement by which my husband can be freed from this curse. O best of *Brahmanas*! Please instruct me on how he can be liberated from this demonic condition."*  \n' +
+      '\n' +
+      'Hearing Lalita’s sorrowful plea, the great sage *Shringi* said:  \n' +
+      '*"O daughter of the *Gandharvas*! In a few days, an Ekadashi known as *Kamada* will occur, which falls during the waxing moon of the month of March/April. By strictly observing this Ekadashi, all desires are fulfilled.  \n' +
+      '\n' +
+      'O gentle lady! Follow my instructions and observe this Ekadashi vow. Then, transfer the merit you accumulate from this observance to your husband. By the influence of this merit, your husband will immediately be freed from his curse."*  \n' +
+      '\n' +
+      'O King! Having received these instructions from the sage, Lalita happily observed the vow of this Ekadashi.  \n' +
+      '\n' +
+      'On the following *Dvadashi* (the twelfth lunar day), Lalita sat before the *Brahmanas* and the deity of the Supreme Lord *Vasudeva* and declared:  \n' +
+      '*"I have observed the vow of *Kamada Ekadashi* to free my husband from his curse. Now, by the accumulated merits I have gained, may my husband be liberated from his demonic state."*  \n' +
+      '\n' +
+      'At that time, her husband, who had been transformed into a demon, was present there. As soon as Lalita completed her prayer, her demonic husband was instantly freed from all sins and regained his original form as a *Gandharva*, appearing even more beautiful than before.  \n' +
+      '\n' +
+      'After this, Lalit and Lalita ascended to their celestial abode on an aerial chariot and lived happily in the heavenly realms."  \n' +
+      '\n' +
+      'Lord Krishna concluded:  \n' +
+      '*"O Maharaja Yudhishthira! O best of kings! One should observe this wonderful Ekadashi as best as one can, for observing it destroys all sins and purifies one\'s consciousness. This Ekadashi can even absolve the sin of killing a *Brahmana* and remove any form of curse."*',
     description_ru:
       'Слава Камада экадаши описана в «Вараха Пуране», в беседе Господа Кришны и Махараджи Юдхиштхиры.\n' +
       'Однажды Махараджа Юдхиштхира обратился к Господу Кришне, венцу династии Яду: «О, Господь Васудева! Пожалуйста, прими мои смиренные поклоны. Пожалуйста, расскажи мне об экадаши, приходящемся на период растущей луны в месяце марте/апреле. Также открой мне, каков процесс соблюдения этого экадаши и каковы приносимые им блага?»\n' +
@@ -181,10 +541,59 @@ exports.ekNames = [
   },
   {
     name: 'Varuthini',
-    name_ru: '',
-    description: '',
+    name_ru: 'Варутхини Экадаши',
+    description:
+      'The glory of *Varuthini Ekadashi* is described in the *Bhavishottara Purana* in the conversation between Lord Krishna and Maharaja Yudhishthira.  \n' +
+      '\n' +
+      '#### **Yudhishthira Inquires About Varuthini Ekadashi**  \n' +
+      '\n' +
+      'Maharaja Yudhishthira said to Sri Krishna:  \n' +
+      '*"O Vasudeva! I offer my humble obeisances to You. Now, please tell me about the Ekadashi that falls during the waning moon of the month of April/May. Kindly describe its name, influence, and glories."*  \n' +
+      '\n' +
+      'Lord Krishna replied:  \n' +
+      '*"My dear King, the name of this Ekadashi is *Varuthini*, and it bestows good fortune upon a person, both in this life and the next. By observing this vow, unhappy wives become joyful. By following this Ekadashi, one attains boundless happiness and prosperity, is freed from the cycle of repeated birth and death, all sinful reactions are destroyed, and one attains devotional service to the Lord.  \n' +
+      '\n' +
+      'By properly observing this Ekadashi, King *Mandhata* was liberated. Many other kings also benefitted from it. For instance, *Maharaja Dundhumara* of the *Ikshvaku* dynasty was cured of leprosy, which he had acquired as a result of a curse from Lord Shiva.  \n' +
+      '\n' +
+      'Observing *Varuthini Ekadashi* grants the merit equivalent to performing ten thousand years of austerities.  \n' +
+      '\n' +
+      'O best of kings! It is better to donate an elephant than a horse. Even better is donating land, but superior to that is offering sesame seeds in charity. Giving gold is better than offering sesame seeds, and even greater than gold is the donation of grains.  \n' +
+      '\n' +
+      'There is no charity greater than the gift of grains! O best of kings! By donating grains, one satisfies the ancestors, demigods, and all living beings.  \n' +
+      '\n' +
+      'The Supreme Lord Himself has compared the donation of grains to the donation of cows. The learned sages have established that giving a daughter in charity is equivalent to donating grains. However, a person who accepts money in exchange for giving away a daughter undoubtedly commits a great sin, for which he will remain in hell until the time of universal dissolution. Therefore, no one should ever accept wealth in exchange for a daughter.  \n' +
+      '\n' +
+      'O King of Kings! A householder who, driven by greed, sells his daughter is destined to be reborn as a cat in his next life. However, a man who adorns his daughter with jewels within his means and gives her in marriage to a worthy groom is so virtuous that even *Chitragupta*, the chief secretary of *Yamaraja* (the lord of justice), is unable to measure his merit.  \n' +
+      '\n' +
+      'Moreover, among all types of charity, the highest is the dissemination of knowledge.  \n' +
+      '\n' +
+      'By observing *Varuthini Ekadashi*, one attains the merits of all forms of charity. The benefits of fasting on *Varuthini Ekadashi* exceed those obtained by donating forty kilograms of gold during a solar eclipse at the holy site of *Kurukshetra*, or by donating elephants, horses, land, sesame seeds, grains, cows, giving one’s daughter in marriage with dowry to a worthy person, or educating an ignorant person.  \n' +
+      '\n' +
+      '#### **Rules and Prohibitions for Observing Varuthini Ekadashi**  \n' +
+      '\n' +
+      'Beyond the fundamental principles of *bhakti-yoga*, the *Vedas* provide numerous recommendations regarding the observance of this vow.  \n' +
+      '\n' +
+      'A person observing this Ekadashi should:  \n' +
+      '- Avoid eating from a metal pot.  \n' +
+      '- Refrain from consuming peas, spinach, and honey.  \n' +
+      '- Avoid eating food prepared by others.  \n' +
+      '- Eat no more than once a day.  \n' +
+      '- Abstain from sexual activity, beginning from the day before Ekadashi.  \n' +
+      '- On the day of Ekadashi, one should not sleep, consume betel nuts, brush their teeth, criticize others, gossip, associate with sinners, become angry, or tell lies.  \n' +
+      '\n' +
+      'On *Dvadashi* (the day after Ekadashi), one should:  \n' +
+      '- Not eat from metal utensils.  \n' +
+      '- Avoid consuming *masura dal* (red lentils) and honey.  \n' +
+      '- Refrain from lying, engaging in physical exercise, performing strenuous labor, eating more than once, having sexual relations, shaving the head or face, applying oil to the body, and eating food prepared by others.  \n' +
+      '\n' +
+      'For followers of *Lord Chaitanya*, the minimum requirement for observing this Ekadashi is to abstain from grains and legumes, including foods containing them.  \n' +
+      '\n' +
+      '#### **The Supreme Benefits of Observing Varuthini Ekadashi**  \n' +
+      '\n' +
+      'Anyone who faithfully observes the vow of *Varuthini Ekadashi* according to the prescribed rules and regulations, remains awake on the day of Ekadashi, and worships *Lord Janardana* (*Krishna*), undoubtedly becomes free from all sins and attains the spiritual world.  \n' +
+      '\n' +
+      'Even one who merely hears or reads about the glories of this Ekadashi receives the benefit of donating a thousand cows and ultimately returns to the supreme abode of *Lord Vishnu* (*Krishna*)."',
     description_ru:
-      'Варутхини Экадаши\n' +
       'Слава Варутхини экадаши описана в «Бхавишьоттаре Пуране» в беседе Господа Кришны и\n' +
       'Махараджи Юдхиштхиры.\n' +
       'Махараджа Юдхиштхира сказал Шри Кришне: «О, Васудева! Я предлагаю Тебе мои смиренные поклоны. Теперь, пожалуйста, расскажи мне об экадаши, который приходится на период убывающей луны в месяце апреле/мае. Расскажи мне о его названии, влиянии и славе».\n' +
@@ -206,7 +615,86 @@ exports.ekNames = [
   {
     name: 'Mohini',
     name_ru: 'Мохини Экадаши',
-    description: '',
+    description:
+      '### *Mohini Ekadashi*  \n' +
+      '\n' +
+      'The glory of *Mohini Ekadashi*, which falls during the waxing moon of the month of April/May, is described in the *Surya Purana*.  \n' +
+      '\n' +
+      '#### **Yudhishthira Inquires About Mohini Ekadashi**  \n' +
+      '\n' +
+      'One day, Maharaja Yudhishthira asked Lord Krishna:  \n' +
+      '*"O Janardana! What is the name of the Ekadashi that falls during the waxing moon of the month of April/May? What is the process of observing this Ekadashi? What merit does one acquire by following it? Please explain this to me in detail."*  \n' +
+      '\n' +
+      'Lord Krishna replied:  \n' +
+      '*"O son of Dharma! Please listen attentively as I narrate to you the story that the great sage *Vasishta* once told to *Lord Ramachandra*.  \n' +
+      '\n' +
+      'One day, while playing the role of the perfect king, *Lord Ramachandra* asked the great sage *Vasishta*:  \n' +
+      "'O revered sage! I am feeling deep sorrow due to separation from *Sita*, the daughter of King Janaka. Please tell me about a great vow, the observance of which can remove all sinful reactions and dispel all suffering.'  \n" +
+      '\n' +
+      'The great sage *Vasishta*, the spiritual teacher of *Ramachandra*, replied:  \n' +
+      "'My dear Rama, your mind is noble, and you are full of faith. Simply by chanting and remembering Your auspicious holy names, all living beings become purified and attain all auspiciousness. However, for the benefit of all people, I will now tell You about this great vow.  \n" +
+      '\n' +
+      'O Lord Rama! This *Mohini Ekadashi* is highly auspicious. By observing this Ekadashi, all sinful reactions, material miseries, and various illusions are destroyed.  \n' +
+      '\n' +
+      '#### **The Story of King Dhrishtabuddhi**  \n' +
+      '\n' +
+      'Once upon a time, on the banks of the sacred *Sarasvati River*, there stood a beautiful city called *Bhadravati*.  \n' +
+      '\n' +
+      'This city was ruled by a king named *Dutimana*. O Lord Rama! This king was born in the *Lunar Dynasty*. He was a tolerant and truthful ruler.  \n' +
+      '\n' +
+      'In the city lived a pious devotee of *Lord Vishnu* named *Dhanapala*. He was a *Vaishya* (merchant) by occupation. For the welfare of common people, this devotee *Dhanapala* built numerous *dharmashalas* (rest houses for pilgrims), schools, temples of *Lord Vishnu*, hospitals, wide roads, and marketplaces. He also provided food for the needy, dug wells and ponds, and planted flower and fruit gardens. Thus, he used his wealth for the benefit of all, living up to his name.  \n' +
+      '\n' +
+      'This virtuous devotee of *Lord Vishnu*, who was always peaceful, benevolent, and engaged in devotional service to *Vishnu*, had five sons named *Samana, Dutimana, Medhavi, Sukriti*, and *Dhrishtabuddhi*.  \n' +
+      '\n' +
+      'Unfortunately, one of them, *Dhrishtabuddhi*, was a thoroughly wicked person. He was a lowly individual who kept company with rogues and scoundrels like himself. He indulged in the company of prostitutes, gambling, and drinking wine. He delighted in killing and tormenting other living beings. Thus, he engaged in various sinful activities and soon became a disgraceful son of a righteous father, bringing dishonor to his lineage.  \n' +
+      '\n' +
+      'He never showed respect to the demigods, guests, ancestors, or *Brahmanas*. His mind was constantly preoccupied with committing sinful acts. The wicked *Dhrishtabuddhi* misused his father’s wealth, spending it on his vile pleasures. He consumed forbidden foods and was addicted to alcohol.  \n' +
+      '\n' +
+      'One day, seeing his shameless son walking in public, embracing a prostitute, *Dhanapala* felt overwhelmed with shame and despair. That very day, he expelled his corrupt son from the house.  \n' +
+      '\n' +
+      'Abandoned, *Dhrishtabuddhi* lost the favor of all—his father, mother, brothers, other relatives, and friends. Soon, he was cast out of his caste and became an object of universal contempt.  \n' +
+      '\n' +
+      'Finding himself homeless, *Dhrishtabuddhi* continued committing sins using the money he obtained by selling his expensive clothes and jewelry. But soon, his fortune was exhausted. He suffered from extreme hunger and was reduced to a destitute beggar. Now that *Dhrishtabuddhi* had become a street wanderer, his so-called friends and lovers abandoned him.  \n' +
+      '\n' +
+      'Consumed by anxiety, *Dhrishtabuddhi* suffered greatly. He had no food, no clothing, and was tormented by hunger. He began thinking:  \n' +
+      '*"What should I do now? Where should I go? How will I survive?"*  \n' +
+      '\n' +
+      'After much contemplation, he realized that his only option was theft. Searching for something to steal, he wandered through the city. Several times, the king’s guards arrested him but released him, remembering the virtues of his father.  \n' +
+      '\n' +
+      'Finally, he was caught for committing a major theft. This time, he was brought before the king, who sentenced him to a severe punishment. The king declared:  \n' +
+      '*"O sinful fool! You have no right to remain in this kingdom, for you are a great offender. I am releasing you now, but you must immediately leave my kingdom and go wherever you please."*  \n' +
+      '\n' +
+      'Fearing that he might receive an even harsher punishment next time, *Dhrishtabuddhi* fled the kingdom.  \n' +
+      '\n' +
+      'He traveled a long distance until he reached a remote forest. Weakened by hunger and thirst, he resorted to killing animals and birds and eating their raw flesh. Carrying a bow and arrows, he wandered the forest, continuing his acts of violence against innocent creatures.  \n' +
+      '\n' +
+      'Thus, *Dhrishtabuddhi* lived in the dark forest for several years, accumulating more and more sins.  \n' +
+      '\n' +
+      'Although he was constantly suffering and filled with anxiety, one day—perhaps due to some past virtuous deeds—he happened upon the sacred ashram of the great sage *Kaundinya*.  \n' +
+      '\n' +
+      'It was the month of *Vaishakha* (April/May), and the exalted sage *Kaundinya* was returning home after bathing in the *Ganges*. By divine arrangement, a few drops of water from the sage’s clothing accidentally sprinkled onto *Dhrishtabuddhi*.  \n' +
+      '\n' +
+      'Miraculously, by merely coming into contact with this sacred water, *Dhrishtabuddhi* was instantly freed from the consequences of his past sinful actions.  \n' +
+      '\n' +
+      'With folded hands and great humility, he said to Sage *Kaundinya*:  \n' +
+      '*"O great Brahmana, I am the most sinful person. There is no sin I have not committed. Now, please tell me of the highest atonement that even a degraded person like me can easily perform.  \n' +
+      '\n' +
+      'Because of my countless sinful deeds, I have lost my home, wealth, relatives, and friends. I am constantly in mental agony."*  \n' +
+      '\n' +
+      'Hearing *Dhrishtabuddhi’s* sincere confession, the compassionate sage *Kaundinya* replied:  \n' +
+      '*"I will tell you of a noble method through which you can easily and quickly free yourself from your sins. Please listen carefully.  \n' +
+      '\n' +
+      '*Mohini Ekadashi*, which falls during the waxing moon of the month of April/May, completely destroys sinful reactions as massive as *Mount Sumeru* (the greatest mountain in the center of the universe) and accumulated over countless lifetimes. Therefore, you must observe this Ekadashi with faith."*  \n' +
+      '\n' +
+      'Upon hearing these words of the great sage, *Dhrishtabuddhi* became overjoyed and observed Ekadashi according to the rules and instructions given by the sage.  \n' +
+      '\n' +
+      'O best of kings! By observing this *Mohini Ekadashi*, the most sinful *Dhrishtabuddhi* was soon freed from all his past sinful reactions. He attained a divine body and ascended to the supreme abode of *Lord Vishnu*, riding upon *Garuda* (the divine bird carrier of *Lord Vishnu*).  \n' +
+      '\n' +
+      '#### **The Supreme Benefits of Mohini Ekadashi**  \n' +
+      '\n' +
+      'O *Ramachandra*! This vow eradicates all types of illusions and the darkness of ignorance.  \n' +
+      '\n' +
+      'The merit acquired from bathing in sacred waters, giving in charity, and performing sacrifices cannot compare to the piety obtained by observing *Mohini Ekadashi*."',
     description_ru:
       'Слава Мохини экадаши, приходящегося на период растущей луны в месяце апреле/мае, описана в\n' +
       '«Сурья Пуране».\n' +

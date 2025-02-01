@@ -1,4 +1,5 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
+
 const Schema = mongoose.Schema;
 
 const citySchema = new Schema(
@@ -26,4 +27,4 @@ const citySchema = new Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.model('City', citySchema);
+export default mongoose.model('City', citySchema);

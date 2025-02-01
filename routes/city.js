@@ -1,8 +1,7 @@
-const express = require('express');
+import express from 'express';
+import { getByName } from '../controllers/city.js';
+
 const router = express.Router();
-
-const { getByName } = require('../controllers/city');
-
 router.get('/', getByName);
 
-module.exports = router;
+export default router;

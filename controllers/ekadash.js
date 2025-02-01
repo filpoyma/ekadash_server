@@ -1,9 +1,8 @@
-const nodemailer = require('nodemailer');
-const Ekadash = require('../models/ekadash');
+import Ekadash from '../models/ekadash.js';
 
-const { generateSixDigitCode } = require('./utils/math.utils');
+// import { generateSixDigitCode } from '../utils/math.utils';
 
-exports.getByYear = async (req, res) => {
+export const getByYear = async (req, res) => {
   const year = req.query.year;
   try {
     const years = await Ekadash.findOne({ year });
@@ -14,104 +13,104 @@ exports.getByYear = async (req, res) => {
   }
 };
 
-exports.sendotp = async (req, res) => {
-  const { email } = req.body;
-  //поиск регистронезависимого email
-  const emailRegExp = new RegExp(`^${email}$`, 'i');
-  try {
-    const user = await User.findOne({ email: { $regex: emailRegExp } }).select(['_id']);
-    if (!user)
-      return res.status(401).json({
-        status: false,
-        message: 'Email not found.'
-      });
-    const otp = generateSixDigitCode();
-    console.log('file-auth.js otp:', otp);
-
-    const transporter = nodemailer.createTransport({
-      service: 'gmail',
-      auth: {
-        user: process.env.LEXICAN_TEAM_EMAIL,
-        pass: process.env.GOOGLE_EMAIL_SENDER_PASSWORD
-      }
-    });
-
-    await transporter.sendMail({
-      from: 'lexican.team@gmail.com',
-      to: email,
-      subject: 'Lexican App',
-      html: `Your OTP CODE is: <b>${otp}</b>`
-    });
-    const salt = await bcrypt.genSaltSync(10);
-    user.password = await bcrypt.hashSync(otp, salt);
-    await user.save();
-    user.password = '';
-    res.json({ status: true, message: 'Email sent' });
-  } catch (err) {
-    console.log('file-auth.js err:', err);
-    res.status(500).json({ status: false, message: 'Error sending email' });
-  }
-};
-
-exports.verifyotp = async (req, res) => {
-  const { email, otp } = req.body;
-  try {
-    //поиск регистронезависимого email
-    const emailRegExp = new RegExp(`^${email}$`, 'i');
-    const user = await User.findOne({ email: { $regex: emailRegExp } }).select([
-      'email',
-      'setup',
-      'password'
-    ]);
-    const isPasswordOk = await bcrypt.compareSync(otp, user.password);
-    if (isPasswordOk) {
-      res.json({
-        status: true,
-        message: 'Successful login.\nChange your password in the profile settings.',
-        user
-      });
-    } else {
-      res.status(401).json({ status: false, message: 'Incorrect code.' });
-    }
-  } catch (err) {
-    console.error('verifyOtp error', err);
-    res.status(401).json({ status: false, message: 'Verification error.' });
-  }
-};
-
-exports.changePassword = async (req, res) => {
-  const { id, password } = req.body;
-  try {
-    const user = await User.findById(id).select(['email', 'setup']);
-    if (user) {
-      const salt = await bcrypt.genSaltSync(10);
-      user.password = await bcrypt.hashSync(password, salt);
-      await user.save();
-      res.json({ status: true, message: 'Password changed', user });
-    } else {
-      res.status(404).json({ status: false, message: 'User not found.' });
-    }
-  } catch (err) {
-    console.error('change password Error:', err);
-    res.status(404).json({ status: false, message: 'Password change error.' });
-  }
-};
-
-const createUser = async (user, res) => {
-  try {
-    await user.save();
-    res.json({ status: true, message: 'User created.', user });
-  } catch (error) {
-    console.error(error);
-    if (error.name === 'MongoServerError' && error.code === 11000) {
-      console.error('error: ', error.message);
-      return res.status(422).json({ status: false, message: 'This email is already taken.' });
-    }
-    if (error.name === 'ValidationError') {
-      console.error('error: ', error.message);
-      return res.status(422).json({ status: false, message: 'Data validation error.' });
-    }
-    // Some other error
-    return res.status(422).json({ status: false, message: error.name });
-  }
-};
+// const sendotp = async (req, res) => {
+//   const { email } = req.body;
+//   //поиск регистронезависимого email
+//   const emailRegExp = new RegExp(`^${email}$`, 'i');
+//   try {
+//     const user = await User.findOne({ email: { $regex: emailRegExp } }).select(['_id']);
+//     if (!user)
+//       return res.status(401).json({
+//         status: false,
+//         message: 'Email not found.'
+//       });
+//     const otp = generateSixDigitCode();
+//     console.log('file-auth.js otp:', otp);
+//
+//     const transporter = nodemailer.createTransport({
+//       service: 'gmail',
+//       auth: {
+//         user: process.env.LEXICAN_TEAM_EMAIL,
+//         pass: process.env.GOOGLE_EMAIL_SENDER_PASSWORD
+//       }
+//     });
+//
+//     await transporter.sendMail({
+//       from: 'lexican.team@gmail.com',
+//       to: email,
+//       subject: 'Lexican App',
+//       html: `Your OTP CODE is: <b>${otp}</b>`
+//     });
+//     const salt = await bcrypt.genSaltSync(10);
+//     user.password = await bcrypt.hashSync(otp, salt);
+//     await user.save();
+//     user.password = '';
+//     res.json({ status: true, message: 'Email sent' });
+//   } catch (err) {
+//     console.log('file-auth.js err:', err);
+//     res.status(500).json({ status: false, message: 'Error sending email' });
+//   }
+// };
+//
+// const verifyotp = async (req, res) => {
+//   const { email, otp } = req.body;
+//   try {
+//     //поиск регистронезависимого email
+//     const emailRegExp = new RegExp(`^${email}$`, 'i');
+//     const user = await User.findOne({ email: { $regex: emailRegExp } }).select([
+//       'email',
+//       'setup',
+//       'password'
+//     ]);
+//     const isPasswordOk = await bcrypt.compareSync(otp, user.password);
+//     if (isPasswordOk) {
+//       res.json({
+//         status: true,
+//         message: 'Successful login.\nChange your password in the profile settings.',
+//         user
+//       });
+//     } else {
+//       res.status(401).json({ status: false, message: 'Incorrect code.' });
+//     }
+//   } catch (err) {
+//     console.error('verifyOtp error', err);
+//     res.status(401).json({ status: false, message: 'Verification error.' });
+//   }
+// };
+//
+// const changePassword = async (req, res) => {
+//   const { id, password } = req.body;
+//   try {
+//     const user = await User.findById(id).select(['email', 'setup']);
+//     if (user) {
+//       const salt = await bcrypt.genSaltSync(10);
+//       user.password = await bcrypt.hashSync(password, salt);
+//       await user.save();
+//       res.json({ status: true, message: 'Password changed', user });
+//     } else {
+//       res.status(404).json({ status: false, message: 'User not found.' });
+//     }
+//   } catch (err) {
+//     console.error('change password Error:', err);
+//     res.status(404).json({ status: false, message: 'Password change error.' });
+//   }
+// };
+//
+// const createUser = async (user, res) => {
+//   try {
+//     await user.save();
+//     res.json({ status: true, message: 'User created.', user });
+//   } catch (error) {
+//     console.error(error);
+//     if (error.name === 'MongoServerError' && error.code === 11000) {
+//       console.error('error: ', error.message);
+//       return res.status(422).json({ status: false, message: 'This email is already taken.' });
+//     }
+//     if (error.name === 'ValidationError') {
+//       console.error('error: ', error.message);
+//       return res.status(422).json({ status: false, message: 'Data validation error.' });
+//     }
+//     // Some other error
+//     return res.status(422).json({ status: false, message: error.name });
+//   }
+// };

@@ -1,6 +1,6 @@
-const City = require('../models/city');
+import City from '../models/city.js';
 
-exports.getByName = async (req, res) => {
+export const getByName = async (req, res) => {
   try {
     const { name } = req.query; // Assuming the search query is passed as a query parameter
     const regex = new RegExp(`^${name}`, 'i');

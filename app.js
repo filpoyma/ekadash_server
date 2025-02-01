@@ -1,32 +1,33 @@
-const compression = require('compression');
-const cors = require('cors');
-const express = require('express');
-const expressMongoSanitize = require('express-mongo-sanitize');
-const { rateLimit } = require('express-rate-limit');
-const helmet = require('helmet');
-const hpp = require('hpp');
-const morgan = require('morgan');
-const path = require('path');
+import compression from 'compression';
+import cors from 'cors';
+import express from 'express';
+import expressMongoSanitize from 'express-mongo-sanitize';
+import { rateLimit } from 'express-rate-limit';
+import helmet from 'helmet';
+import hpp from 'hpp';
+import morgan from 'morgan';
+import path from 'path';
 
-const index = require('./routes/index');
-const ekadashRouter = require('./routes/ekadash');
-const cityRouter = require('./routes/city');
+import index from './routes/index.js';
+import ekadashRouter from './routes/ekadash.js';
+import cityRouter from './routes/city.js';
 
-const checkXApiKey = require('./middlewares/checkXApiKey');
+import checkXApiKey from './middlewares/checkXApiKey.js';
 
-const APP = express();
+const app = express();
 const isProd = process.env.ENVIRONMENT === 'prod';
+const __dirname = import.meta.dirname;
 
 // Используем прокси, и ему можно доверять
-APP.enable('trust proxy');
+app.enable('trust proxy');
 
 // Шаблонизатор
 // На случай отсутствия нормального клиента
-APP.set('views', path.join(__dirname, 'views'));
-APP.set('trust proxy', 1);
+// app.set('views', path.join(__dirname, 'views'));
+app.set('trust proxy', 1);
 
-// APP.use(cors());
-APP.use(
+// app.use(cors());
+app.use(
   cors({
     credentials: true,
     origin: true,
@@ -34,19 +35,19 @@ APP.use(
     methods: 'GET,HEAD, POST, PATCH, DELETE, OPTIONS, PUT'
   })
 );
-APP.options('*', cors());
+app.options('*', cors());
 // или для каждого поинта отдельно
 // app.options('/api/v1/some', cors());
 
 // Путь до директории со статическими файлами
-APP.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Небольшая защита в виде добавления
 // HTTP заголовков
-APP.use(helmet());
+app.use(helmet());
 
 // В режиме разработки добавляем логгер - в консоль , в режиме прод - в файл access.log
-if (!isProd) APP.use(morgan('dev'));
+if (!isProd) app.use(morgan('dev'));
 
 // Установка лимита запросов на АПИ с одного IP
 const limiter = rateLimit({
@@ -57,21 +58,21 @@ const limiter = rateLimit({
   message: 'Too many requests from this IP, please try again later.'
 });
 
-APP.use(limiter);
+app.use(limiter);
 
 // Лимит на чтение данных из тела запроса
-APP.use(
+app.use(
   express.json({
     limit: '50mb',
     type: 'application/json'
   })
 );
 
-APP.use(express.urlencoded({ extended: true, limit: '50kb' }));
+app.use(express.urlencoded({ extended: true, limit: '50kb' }));
 
-APP.use(expressMongoSanitize());
+app.use(expressMongoSanitize());
 
-// APP.use(
+// app.use(
 //   hpp({
 //     whitelist: [
 //       'duration',
@@ -84,16 +85,16 @@ APP.use(expressMongoSanitize());
 //   })
 // );
 
-APP.use(compression());
+app.use(compression());
 
-APP.use((req, res, next) => {
+app.use((req, res, next) => {
   console.log(req.method, req.originalUrl);
   next();
 });
 
-APP.use('/', index);
-// APP.use(checkXApiKey);
-APP.use('/ekadash', ekadashRouter);
-APP.use('/city', cityRouter);
+app.use('/', index);
+// app.use(checkXApiKey);
+app.use('/ekadash', ekadashRouter);
+app.use('/city', cityRouter);
 
-module.exports = APP;
+export default app;

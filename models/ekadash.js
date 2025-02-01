@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 const Schema = mongoose.Schema;
 
 const DaySchema = {
@@ -8,7 +8,7 @@ const DaySchema = {
   description: { type: String, default: null },
   description_ru: { type: String, default: null },
   exit_time: { type: String, default: null },
-  light_time: { type: String, default: null },
+  light_time: { type: String, default: null }
 };
 
 const MonthSchema = new Schema(
@@ -37,4 +37,4 @@ const YearSchema = new Schema({
   zone: { type: Number, required: true }
 });
 
-module.exports = mongoose.model('Ekadash', YearSchema);
+export default mongoose.model('Ekadash', YearSchema);

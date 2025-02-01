@@ -1,10 +1,10 @@
-const express = require('express');
-const router = express.Router();
+import express from 'express';
+import { index, getEkadash, setMoonDays } from '../controllers/index.js';
 
-const { index, getEkadash, setMoonDays } = require('../controllers/index');
+const router = express.Router();
 
 router.get('/', index);
 router.get('/save', getEkadash);
 router.get('/moon', setMoonDays);
 
-module.exports = router;
+export default router;

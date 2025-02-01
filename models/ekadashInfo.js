@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 const Schema = mongoose.Schema;
 
 const EkNamesSchema = new Schema(
@@ -26,4 +26,4 @@ const EkNamesSchema = new Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.model('EkadashInfo', EkNamesSchema);
+export default mongoose.model('EkadashInfo', EkNamesSchema);

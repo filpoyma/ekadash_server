@@ -1,8 +1,7 @@
-const Ekadash = require('../models/ekadash');
-const Moon = require('../models/moon');
-const EkadashInfo = require('../models/ekadashInfo');
-const { ekNames } = require('../models/seed');
-const SunCalc = require('suncalc');
+import Ekadash from '../models/ekadash.js';
+import Moon from '../models/moon.js';
+import EkadashInfo from '../models/ekadashInfo.js';
+import { ekNames } from '../models/seed.js';
 
 function filterPrimitiveFields(obj) {
   const result = {};
@@ -14,11 +13,11 @@ function filterPrimitiveFields(obj) {
   return result;
 }
 
-exports.index = async (req, res) => {
+export const index = (req, res) => {
   res.send(`Server Status - OK`);
 };
 
-exports.getEkadash = async (req, res) => {
+export const getEkadash = async (req, res) => {
   // return res.end(`Ekadashi saved.`);
   for (let i = 34; i <= 64; i++) {
     try {
@@ -50,13 +49,13 @@ exports.getEkadash = async (req, res) => {
       // await ekadashas.save();
       // await new Promise((resolve) => setTimeout(resolve, 2000));
     } catch (err) {
-      console.error('Error ekadashi:', error);
+      console.error('Error ekadashi:', err);
     }
   }
   res.end(`Ekadashi saved.`);
 };
 
-// exports.getEkadash = async (req, res) => {
+// const  getEkadash = async (req, res) => {
 //   try {
 //     const response = await fetch(`https://ekadasi.info/api/cities`);
 //     const cities = await response.json();
@@ -78,7 +77,7 @@ exports.getEkadash = async (req, res) => {
 
 const months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
 
-// exports.setEkadNames = (req, res) => {
+// const  setEkadNames = (req, res) => {
 //   ekNames.map(async (item) => {
 //     try {
 //       console.log('file-index.js name:', item);
@@ -91,9 +90,10 @@ const months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', '
 //   res.end(`ekad saved.`);
 // };
 
-exports.setMoonDays = async (req, res) => {
+export const setMoonDays = async (req, res) => {
   try {
-    for (let year = 2028; year <= 2029; year++) {
+    for (let year = 2030; year <= 2033; year++) {
+      //докинуть 2033 12й месяц
       const ekadashDays = await Ekadash.findOne({ year });
       // console.log('file-index.js ekadashDays:', ekadashDays);
       for (let month = 1; month <= 12; month++) {
