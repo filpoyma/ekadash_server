@@ -93,7 +93,7 @@ const months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', '
 
 exports.setMoonDays = async (req, res) => {
   try {
-    for (let year = 2024; year <= 2043; year++) {
+    for (let year = 2028; year <= 2029; year++) {
       const ekadashDays = await Ekadash.findOne({ year });
       // console.log('file-index.js ekadashDays:', ekadashDays);
       for (let month = 1; month <= 12; month++) {
