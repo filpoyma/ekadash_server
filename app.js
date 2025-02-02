@@ -11,8 +11,11 @@ import path from 'path';
 import index from './routes/index.js';
 import ekadashRouter from './routes/ekadash.js';
 import cityRouter from './routes/city.js';
+import authRouter from './routes/auth.js';
+import userRouter from './routes/user.js';
 
 import checkXApiKey from './middlewares/checkXApiKey.js';
+import checkAuth from './middlewares/checkAuth.js';
 
 const app = express();
 const isProd = process.env.ENVIRONMENT === 'prod';
@@ -93,7 +96,10 @@ app.use((req, res, next) => {
 });
 
 app.use('/', index);
-// app.use(checkXApiKey);
+app.use(checkXApiKey);
+app.use(checkAuth);
+app.use('/auth', authRouter);
+app.use('/user', userRouter);
 app.use('/ekadash', ekadashRouter);
 app.use('/city', cityRouter);
 
