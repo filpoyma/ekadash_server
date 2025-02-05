@@ -1,7 +1,8 @@
 import express from 'express';
-import { getByYear } from '../controllers/ekadash.js';
+import { getByYear, getByMonth } from '../controllers/ekadash.js';
 
 const router = express.Router();
-router.get('/years', getByYear);
+router.get('/year', getByYear);
+router.get('/month', getByMonth);
 
 export default router;

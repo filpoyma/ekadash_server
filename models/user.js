@@ -14,6 +14,11 @@ const citySchema = new Schema(
       required: true,
       trim: true
     },
+    timezone: {
+      type: String,
+      required: true,
+      trim: true
+    },
     email: {
       type: String,
       required: false,
@@ -28,6 +33,11 @@ const citySchema = new Schema(
       type: Number,
       required: false,
       default: 0
+    },
+    notifiedToday: {
+      type: Boolean,
+      required: false,
+      default: false
     }
   },
   { timestamps: true }

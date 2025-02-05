@@ -2,6 +2,22 @@ import Ekadash from '../models/ekadash.js';
 import Moon from '../models/moon.js';
 import EkadashInfo from '../models/ekadashInfo.js';
 import { ekNames } from '../models/seed.js';
+import Ekadashi from '../models/ekadashi.js';
+
+const monthAbbreviations = [
+  'jan',
+  'feb',
+  'mar',
+  'apr',
+  'may',
+  'jun',
+  'jul',
+  'aug',
+  'sep',
+  'oct',
+  'nov',
+  'dec'
+];
 
 function filterPrimitiveFields(obj) {
   const result = {};
@@ -91,12 +107,11 @@ const months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', '
 // };
 
 export const setMoonDays = async (req, res) => {
-  return res.end();
   try {
-    for (let year = 2033; year <= 2035; year++) {
-      //закончил на 2035
+    for (let year = 2036; year <= 2038; year++) {
+      //закончил на: 2038 8
       const ekadashDays = await Ekadash.findOne({ year });
-      // console.log('file-index.js ekadashDays:', ekadashDays);
+
       for (let month = 1; month <= 12; month++) {
         const res = await fetch(
           `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/Aberdeen/${year}-${month}-${1}//${year}-${month}-${new Date(
@@ -111,21 +126,6 @@ export const setMoonDays = async (req, res) => {
         const datainsert = await Moon.insertMany(moonDays.days);
         console.log('All moon data saved successfully.', datainsert.length);
         await new Promise((resolve) => setTimeout(resolve, 1000));
-
-        const monthAbbreviations = [
-          'jan',
-          'feb',
-          'mar',
-          'apr',
-          'may',
-          'jun',
-          'jul',
-          'aug',
-          'sep',
-          'oct',
-          'nov',
-          'dec'
-        ];
 
         const ekadashDaysByMonth = Array.from(
           ekadashDays.months[monthAbbreviations[month - 1]].keys()
@@ -181,4 +181,34 @@ export const setMoonDays = async (req, res) => {
     console.error(err);
     res.status(500).send(JSON.stringify(err.message));
   }
+};
+
+export const convertDb = async (req, res) => {
+  const ekadash = await Ekadash.findOne({ year: 2025 });
+  for (const month of months) {
+    for (let i = 1; i <= 31; i++) {
+      const info = ekadash.months[month].get(i.toString());
+      if (info) {
+        console.log('file-index.js info.ekadasi_name:', info.ekadasi_name);
+        const ekadashiInfo = await EkadashInfo.findOne({ name: info.ekadasi_name }, null, {
+          lean: false
+        });
+        if (!ekadashiInfo) continue;
+
+        console.log('file-index.js ekadashiInfo:', ekadashiInfo?._id);
+        console.log('file-index.js ekadashiInfo:', ekadashiInfo.name);
+        const ekadashi = new Ekadashi({
+          year: 2025,
+          month: monthAbbreviations.indexOf(month) + 1,
+          day: i,
+          ekadasi_name: ekadashiInfo.name,
+          description_data: ekadashiInfo._id,
+          exit_time: info.exit_time
+        });
+        await ekadashi.save();
+      }
+      // console.log('file-index.js info:', info);
+    }
+  }
+  res.end(`convert saved.`);
 };

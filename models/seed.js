@@ -2,7 +2,8 @@ export const ekNames = [
   {
     name: 'Saphala',
     name_ru: 'Ca-пхала Экадаши',
-    description:
+    name_en: 'Saphala Ekadashi',
+    description_en:
       'When Maharaja Yudhishthira asked Lord Krishna to tell him about Saphala Ekadashi, Lord Krishna first expressed how pleased He was when His devotees observed Ekadashi and requested Yudhishthira to listen very carefully.\n' +
       '\n' +
       'First, the Lord stated that according to circumstances, on Saphala Ekadashi, a person should offer Him fresh fruits, incense, and lamps with ghee, and, if possible, stay awake throughout the night, chanting the glories of the Lord. Then Krishna described the results of observing Saphala Ekadashi:\n' +
@@ -26,7 +27,8 @@ export const ekNames = [
   {
     name: 'Putrada',
     name_ru: 'Путрада Экадаши',
-    description:
+    name_en: 'Putrada Ekadashi',
+    description_en:
       'The glory of Putrada Ekadashi, which falls during the waxing moon of the month of December/January, is described in the Bhavishya Uttara Purana. In response to Maharaja Yudhishthira’s inquiry, Lord Krishna stated that everyone should observe Putrada Ekadashi in the best possible way, as it frees one from all sins, and by following this Ekadashi, people attain knowledge and fame.\n' +
       '\n' +
       'Then Krishna narrated the following story.\n' +
@@ -69,7 +71,8 @@ export const ekNames = [
   {
     name: 'Sat-tila',
     name_ru: 'Шат-тила Экадаши',
-    description:
+    name_en: 'Sat-tila Ekadashi',
+    description_en:
       'This Ekadashi falls during the waning moon of the month of January/February. The glory of Shat-Tila Ekadashi is described in the *Bhavishya Uttara Purana*.\n' +
       '\n' +
       'One day, Dalbhya Rishi asked the sage Pulastya Muni:  \n' +
@@ -142,7 +145,8 @@ export const ekNames = [
   {
     name: 'Bhaimi',
     name_ru: 'Джая (Бхаими) Экадаши',
-    description:
+    name_en: 'Bhaimi Ekadashi',
+    description_en:
       'The glory of Jaya (Bhaimi) Ekadashi, which falls during the waxing moon of the month of January/February, is described in the *Bhavishya Uttara Purana* in the conversation between Lord Krishna and Maharaja Yudhishthira.\n' +
       '\n' +
       'One day, Maharaja Yudhishthira asked Lord Krishna:  \n' +
@@ -214,7 +218,8 @@ export const ekNames = [
   {
     name: 'Vijaya',
     name_ru: 'Виджая Экадаши',
-    description:
+    name_en: 'Vijaya Ekadashi',
+    description_en:
       'The glory of this Ekadashi is described in the *Skanda Purana*. One day, Maharaja Yudhishthira approached Lord Krishna and said:  \n' +
       '*"O Krishna, please be kind to me and describe the Ekadashi that falls during the waning moon of the month of February/March."*\n' +
       '\n' +
@@ -283,7 +288,8 @@ export const ekNames = [
   {
     name: 'Amalaki vrata',
     name_ru: 'Амалаки Экадаши',
-    description:
+    name_en: 'Amalaki vrata Ekadashi',
+    description_en:
       'The glory of Amalaki Ekadashi, which falls during the waxing moon of the month of February/March, is described in the *Brahmanda Purana*.  \n' +
       '\n' +
       'One day, King Mandhata approached the sage Vasishta and said:  \n' +
@@ -368,7 +374,8 @@ export const ekNames = [
   {
     name: 'Papamocani',
     name_ru: 'Папамочани Экадаши',
-    description:
+    name_en: 'Papamocani Ekadashi',
+    description_en:
       'The glory of Papamochani Ekadashi is described in the *Bhavishottara Purana* in the conversation between Lord Krishna and Maharaja Yudhishthira.  \n' +
       '\n' +
       'One day, Maharaja Yudhishthira asked Lord Krishna:  \n' +
@@ -476,7 +483,8 @@ export const ekNames = [
   {
     name: 'Kamada',
     name_ru: 'Камада Экадаши',
-    description:
+    name_en: 'Kamada Ekadashi',
+    description_en:
       'The glory of *Kamada Ekadashi* is described in the *Varaha Purana*, in a conversation between Lord Krishna and Maharaja Yudhishthira.\n' +
       '\n' +
       'One day, Maharaja Yudhishthira approached Lord Krishna, the crown jewel of the Yadu dynasty, and said:  \n' +
@@ -542,7 +550,8 @@ export const ekNames = [
   {
     name: 'Varuthini',
     name_ru: 'Варутхини Экадаши',
-    description:
+    name_en: 'Varuthini Ekadashi',
+    description_en:
       'The glory of *Varuthini Ekadashi* is described in the *Bhavishottara Purana* in the conversation between Lord Krishna and Maharaja Yudhishthira.  \n' +
       '\n' +
       '#### **Yudhishthira Inquires About Varuthini Ekadashi**  \n' +
@@ -615,7 +624,8 @@ export const ekNames = [
   {
     name: 'Mohini',
     name_ru: 'Мохини Экадаши',
-    description:
+    name_en: 'Mohini Ekadashi',
+    description_en:
       '### *Mohini Ekadashi*  \n' +
       '\n' +
       'The glory of *Mohini Ekadashi*, which falls during the waxing moon of the month of April/May, is described in the *Surya Purana*.  \n' +
@@ -722,7 +732,29 @@ export const ekNames = [
   {
     name: 'Apara',
     name_ru: 'Апара Экадаши',
-    description: '',
+    name_en: 'Apara Ekadashi',
+    description_en:
+      'Apara Ekadashi, which falls during the waning moon period of the month of May/June, is described in the Brahmanda Purana.\n' +
+      '\n' +
+      'Once, Maharaja Yudhishthira asked Lord Krishna, “O Krishna, O Janardana, what is the name of the Ekadashi that falls during the waning moon in the month of May/June, and what is its glory? Please tell me about it.”\n' +
+      '\n' +
+      'Lord Krishna replied, “O Maharaja Yudhishthira, you have asked me an intelligent question, one that brings benefit to everyone. The name of this Ekadashi is Apara. O King! This Ekadashi bestows great merit upon those who observe it and destroys all sinful reactions.\n' +
+      '\n' +
+      'By observing this Ekadashi, the consequences of many sinful acts are eradicated, including the killing of a Brahmana, killing a cow, killing an unborn child, criticizing others, engaging in illicit sexual relationships, lying, giving false testimony, boasting, reciting the Vedas or teaching the Vedas for monetary gain, and fabricating so-called scriptures.\n' +
+      '\n' +
+      'A deceiver, a pseudo-astrologer, and a quack doctor are as sinful as a false witness. All such sinful activities are nullified by observing Apara Ekadashi. Any Kshatriya (warrior) who neglects his duty and flees from the battlefield undoubtedly falls into hell. However, if such a person observes this Ekadashi with faith, he also attains heaven.”\n' +
+      '\n' +
+      'Lord Krishna continued, “O King! A disciple who, after receiving knowledge from his spiritual master, insults him, commits a great sin. Such a cursed sinner can be saved from the endless suffering he is destined for by observing Apara Ekadashi, thereby achieving the ultimate goal of life.\n' +
+      '\n' +
+      'O King of Kings! The results obtained by bathing three times in the holy lake Pushkar in the month of Kartika, the merit acquired by bathing in Prayag in January when the sun enters the constellation of Capricorn, the results achieved by observing the vow of Shiva Ratri in Kashi and worshipping the lotus feet of Lord Vishnu in Gaya, as well as the auspicious fruits of bathing in the river Gautami when Jupiter enters the constellation of Leo, and the fruits attained by visiting Kedarnath during the Kumbha Mela, visiting Badrinath and worshipping there, bathing in Kurukshetra during a solar eclipse, and donating elephants, cows, gold, and land—all of these are easily attained by observing the vow of Apara Ekadashi.\n' +
+      '\n' +
+      'This Ekadashi is like a sharp axe that cuts down the tree of sin, like a forest fire that burns all sins to ashes. It is like the radiant sun that dispels the darkness of sin, and like a lion that devours the deer of sin in the forest of transgressions.\n' +
+      '\n' +
+      'O King! By observing this Apara Ekadashi and worshipping Lord Vishnu in His Trivikrama form, one attains the all-auspicious abode of Lord Vishnu (Krishna).\n' +
+      '\n' +
+      'Anyone who fears their past and present sins should carefully observe this Ekadashi and worship the Supreme Lord; otherwise, they will be reborn in the material world like a tiny bubble in an ocean of foaming bubbles.\n' +
+      '\n' +
+      'Even one who hears about the glory of this Ekadashi or reads about it is freed from the consequences of all sins. For the benefit of all, I have narrated to you its glories.”',
     description_ru:
       'Апара экадаши, который приходится на период убывающей луны месяца мая/июня, описан в\n' +
       '«Брахманда Пуране».\n' +
@@ -743,7 +775,44 @@ export const ekNames = [
   {
     name: 'Pandava Nirjala',
     name_ru: 'Нирджала (Пандава, Бхима) Экадаши',
-    description: '',
+    name_en: 'Нирджала Ekadashi',
+    description_en:
+      '**The Description of Pandava Nirjala Ekadashi**, which falls in the month of May/June, is found in the *Brahma Vaivarta Purana*, in a conversation between Vyasa Deva and Bhimasena.  \n' +
+      '\n' +
+      'One day, Bhimasena, the younger brother of Yudhishthira, approached the great sage Srila Vyasadeva and said:  \n' +
+      '“O most learned and venerable grandfather, please hear my request. My elder brother Yudhishthira, my mother Kuntidevi, my brothers Arjuna, Nakula, Sahadeva, and my wife Draupadi all abstain from eating on the day of Ekadashi. They, especially Yudhishthira, constantly tell me that I must fast on Ekadashi. However, I always respond to them that I am incapable of fasting, even though I know that fasting on Ekadashi is prescribed in the scriptures. I am simply unable to tolerate hunger and therefore cannot fast.  \n' +
+      '\n' +
+      'I am able to give charity as much as my means allow; I can worship Lord Keshava (Krishna) according to rules and regulations, but I cannot fast. Therefore, please instruct me—how can I obtain the results of observing Ekadashi without fasting?”  \n' +
+      '\n' +
+      'Upon hearing these words from Bhimasena, Srila Vyasadeva said:  \n' +
+      '“O Bhima! You have already heard from me about the Vedic religious principles and the duties of man. However, in this age of Kali, no one is able to follow all these rules and restrictions. Therefore, I will tell you about an exalted method by which you can achieve remarkable results. This method is the essence of all the Puranas. If a person wishes to attain heaven and avoid hell, they must abstain from eating food on the Ekadashi days of each month.”  \n' +
+      '\n' +
+      'Hearing the words of Vyasadeva, the mighty warrior Bhimasena was struck with fear and trembled like a banyan leaf. He said:  \n' +
+      '“O grandfather! In that case, what should I do? I am completely incapable of fasting on all twenty-four Ekadashis each year. What to speak of fasting day and night—I cannot endure hunger for even a single moment. The fire of hunger, known as *vrika*, always burns in my stomach, and it can only be extinguished by abundant food. With great effort, I may be able to fast for just one day in a year.  \n' +
+      '\n' +
+      'Therefore, my lord, please give me instructions on how to observe a vow that grants the highest merit and all possible benefits, both in this life and the next.”  \n' +
+      '\n' +
+      'Srila Vyasadeva replied:  \n' +
+      '“The Ekadashi that falls during the waxing moon in the month of May/June, when the sun is either in Taurus or Gemini, is called **Nirjala Ekadashi**.  \n' +
+      '\n' +
+      'On this Ekadashi, one must observe a **complete fast**. No food can be consumed on this day, or else the vow will be broken. Not even water should be drunk—from sunrise on Ekadashi until sunrise on Dwadashi (the following day).  \n' +
+      '\n' +
+      'On the morning of Dwadashi, one should take a bath and donate gold and water to Brahmanas.  \n' +
+      '• After that, one should eat in the company of Brahmanas with a joyful heart.  \n' +
+      '\n' +
+      'O Bhimasena! Now, please hear about the merits a person acquires by observing this Ekadashi. By following this Ekadashi, one obtains the results of observing all the Ekadashis of the year.”  \n' +
+      '\n' +
+      'Once, Lord Vishnu, who holds a conch, disc, club, and lotus, told me that if someone renounces various duties and surrenders to Him, observing **this Nirjala Ekadashi**, which is very dear to Him, that person will undoubtedly be freed from the consequences of all sinful actions.  \n' +
+      '\n' +
+      'In this Kali-yuga, it is impossible to achieve the highest goal merely by performing charity or following the *Smriti* (scriptural injunctions). In fact, the religious principles of the Vedas are ineffective in this era, which is tainted by many faults.  \n' +
+      '\n' +
+      'O son of Vayu! What more can I say to you? Eating food is forbidden on all Ekadashis, and even water is forbidden on **Nirjala Ekadashi**. By observing this Ekadashi, a person attains the results of visiting all holy places. At the time of death, such a person does not encounter the fierce *Yamadutas* (messengers of Yamaraja, the god of death, who punish sinners). Instead, they are greeted by the divine *Vishnudutas* (messengers of Lord Vishnu), who take them to the abode of Vishnu. If, after observing this Ekadashi, a person donates water and cows, they become completely free from all sins.”  \n' +
+      '\n' +
+      'When the other Pandava brothers heard about the glory of this Ekadashi, they too decided to observe it. From that day forward, this Ekadashi became known as **Pandava Ekadashi** or **Bhimasena Ekadashi**. If a person observes this Ekadashi, their sins—equal in weight to the great Mount Sumeru or Mount Mandara—are immediately burned to ashes.  \n' +
+      '\n' +
+      'O King! Lord Krishna has declared that any pious activity—such as bathing in a sacred place, giving charity, reciting Vedic mantras, or performing sacrifices—when carried out on this Ekadashi, yields **unimaginable** results.  \n' +
+      '\n' +
+      'Whoever reads or listens to the narration of this Ekadashi with devotion will return to the abode of Vaikuntha (the spiritual world). Simply by hearing the glories of this Ekadashi, one attains the results of observing the *Amavasya* vow along with *Pratipada* and performing ritual offerings to ancestors during a solar eclipse.”',
     description_ru:
       'Описание Пандава Нирджала экадаши, который выпадает на месяц май/июнь, встречается в\n' +
       '«Брахма Ваиварта Пуране», в беседе Вьясадевы и Бхимасены.\n' +
@@ -768,7 +837,8 @@ export const ekNames = [
   {
     name: 'Yogini',
     name_ru: 'Йогини Экадаши',
-    description: '',
+    name_en: 'Yogini Ekadashi',
+    description_en: '',
     description_ru:
       'Слава Йогини Экадаши, который приходится на период убывающей луны в месяце июне/июле, описана в «Брахма Ваиварта Пуране» в беседе Господа Кришны и Махараджа Юдхиштхиры.\n' +
       'Однажды Махарадж Юдхиштхира сказал, обращаясь к Кришне: «О, Верховный Господь, о, Мадхусудана! Я услышал о славе Нирджала экадаши. Теперь я желаю услышать об экадаши, который выпадает на период убывающей луны в месяце июне/июле».\n' +
@@ -791,7 +861,8 @@ export const ekNames = [
   {
     name: 'Sayana',
     name_ru: 'Дева-шаяни (Падма) Экадаши',
-    description: '',
+    name_en: 'Sayana Ekadashi',
+    description_en: '',
     description_ru:
       'Шаяна (Девашаяни или Падма) экадаши описан в «Бхавишьоттара Пуране» в беседе Господа Кришны и Махараджи Юдхиштхиры.\n' +
       'Однажды император Махараджа Юдхиштхира, обратившись к Кришне, сказал: «О Кешава! Как зовется тот экадаши, что приходится на период нарастающей луны в месяце июне/июле? Какому божеству поклоняются в этот священный день и каковы правила соблюдения этого экадаши?\n' +
@@ -831,7 +902,8 @@ export const ekNames = [
   {
     name: 'Kamika',
     name_ru: 'Камика Экадаши',
-    description: '',
+    name_en: 'Kamika Ekadashi',
+    description_en: '',
     description_ru:
       'Камика экадаши описан в «Брахмавиварта Пуране» в беседе Господа Кришны и Махараджи Юдхиштхиры. Махараджа Юдхиштхира сказал: «О, Верховный Господь Кришна! Я хотел бы услышать о том экадаши, который выпадает на период убывающей луны в месяце июле/августе. О,\n' +
       'Владыка, пожалуйста, будь добр ко мне и расскажи о его славе».\n' +
@@ -844,7 +916,8 @@ export const ekNames = [
   {
     name: 'Pavitropana',
     name_ru: 'Павитра Экадаши',
-    description: '',
+    name_en: 'Pavitropana Ekadashi',
+    description_en: '',
     description_ru:
       'Слава Павитропана экадаши описана в «Бхавишьоттара Пуране», в беседе Господа Кришны и Махараджи Юдхиштхиры. Однажды Махараджа Юдхиштхира обратился к Кришне с такими словами: «О, Мадхусудана, убийца демона Мадху! Как зовется тот экадаши, что приходится на период растущей луны, в месяце июле/августе, и какова его слава? Пожалуйста, расскажи мне об этом подробно».\n' +
       'Господь Кришна отвечал: «О, Царь! Этот священный экадаши зовется Павитра экадаши. Теперь, пожалуйста, внимательно выслушай рассказ об этом экадаши, который уничтожает последствия всех грехов. Слушая о славе этого экадаши, человек получает результаты жертвоприношения Ваджапейя (самое большое из всех жертвоприношений для достижения материальных благ).\n' +
@@ -865,7 +938,8 @@ export const ekNames = [
   {
     name: 'Annada',
     name_ru: 'Аннада (Аджа) Экадаши',
-    description: '',
+    name_en: 'Annada Ekadashi',
+    description_en: '',
     description_ru:
       'Слава Аннада (Аджа) экадаши описана в «Брахмаваиварта Пуране».\n' +
       'Махараджа Юдхиштхира спросил: «О, Кришна! Как называется тот экадаши, который приходится на период убывающей луныв месяце августе/сентябре? Пожалуйста, будь добр и расскажи мне о нём».\n' +
@@ -884,7 +958,8 @@ export const ekNames = [
   {
     name: 'Parsva',
     name_ru: 'Паршва Экадаши',
-    description: '',
+    name_en: 'Parsva Ekadashi',
+    description_en: '',
     description_ru:
       'Слава Паршва экадаши, который также известен как Паривартини экадаши или Вамана экадаши, описан в «Брахмаваиварта Пуране» в беседе Господа Кришны и Махараджи Юдхиштхиры.\n' +
       'Махараджа Юдхиштхира спросил Господа Кришну: «Как называется и как следует соблюдать этот экадаши, и какое благо от него можно получить, пожалуйста, расскажи мне об этом подробно».\n' +
@@ -903,7 +978,8 @@ export const ekNames = [
   {
     name: 'Indira',
     name_ru: 'Индира Экадаши',
-    description: '',
+    name_en: 'Indira Ekadashi',
+    description_en: '',
     description_ru:
       'Слава Индира экадаши описана в «Брахмаваиварта Пуране» в беседе Господа Кришны и Махараджи\n' +
       'Юдхишхиры.\n' +
@@ -927,7 +1003,8 @@ export const ekNames = [
   {
     name: 'Pasankusa',
     name_ru: 'Пашанкуша Экадаши',
-    description: '',
+    name_en: 'Pasankusa Ekadashi',
+    description_en: '',
     description_ru:
       'Слава Пашанкуша экадаши, который приходится на период растущей луны в месяце сентябре/ октябре, описывается в «Брахмаваиварта Пуране» в беседе Господа Кришны и Махараджи Юдхиштхиры. Махараджа Юдхишхира спросил: «О, Мадхусудана, как зовется экадаши периода растущей луны в месяце сентябре/октябре? Пожалуйста, будь добр, расскажи мне об этом».\n' +
       'Господь Кришна отвечал: «О, лучший из царей! Этот экадаши зовется Пашанкуша или Папанкуша (санксрит: «папа» - грех). Теперь, пожалуйста, услышь об этом экадаши, который уничтожает все грехи. В день этого экадаши следует поклоняться Господу Вишну (Кришне) в образе Падманабхи.\n' +
@@ -946,7 +1023,8 @@ export const ekNames = [
   {
     name: 'Rama',
     name_ru: 'Рама Экадаши',
-    description: '',
+    name_en: 'Rama Ekadashi',
+    description_en: '',
     description_ru:
       'Слава Рама экадаши описана в «Брахмаваиварта Пуране» в беседе Господа Кришны и Махараджа Юдхиштхиры. Махараджа Юдхиштхира сказал: «О, Джанардан! Как зовется тот экадаши, который приходится на период убывающей луны в месяце октябре/ноябре? Пожалуйста, расскажи мне о нем».\n' +
       'Господь Кришна отвечал: «0, лев среди царей! Имя этого экадаши - Рама экадаши; он уничтожает последствия всех греховных поступков и дарует вход в духовную обитель. Теперь, пожалуйста, услышь о славе этого священного экадаши.\n' +
@@ -983,7 +1061,8 @@ export const ekNames = [
   {
     name: 'Utthana',
     name_ru: 'Уттхана Экадаши',
-    description: '',
+    name_en: 'Utthana Ekadashi',
+    description_en: '',
     description_ru:
       'Слава Уттхана экадаши описана в «Сканда Пуране» в беседе Господа Брахмы и Нарады Муни.\n' +
       'Однажды Господь Брахма сказал Нараде Муни: «О, лучший из мудрецов! Пожалуйста, услышь от меня о славе Уттхана экадаши, который разрушает последствия всех греховных поступков, увеличивает благочестие и награждает освобождением. О, лучший из брахманов! Верховное положение Ганги оставалось неизменным до тех пор, пока в этом мире не проявился Уттхана экадаши, который выпадает на период растущей луны в месяце октябре/ноябре и сжигает все грехи дотла. Влияние благочестия океанов и озёр было несравненным до тех пор, пока не проявился Уттхана (Харибодхини) экадаши. Результат, достижимый благодаря совершению тысячи жертвоприношений коня и сотни жертвоприношений Раджасуйя (великие императорские жертвоприношения прошлых эпох), может быть легко достижим благодаря соблюдению этого экадаши».\n' +
@@ -1003,7 +1082,8 @@ export const ekNames = [
   {
     name: 'Utpanna',
     name_ru: 'Утпанна Экадаши',
-    description: '',
+    name_en: 'Utpanna Ekadashi',
+    description_en: '',
     description_ru:
       'Слава Утпанна экадаши описана в «Бхавишйоттара Пуране» в беседе Шри Кришны и Арджуны.\n' +
       'Шри Сута Госвами сказал собравшимся брахманам и мудрецам: «Если человек с верой и преданностью слушает о славе экадаши и предписаниях, к нему относящихся, которые были описаны Господом Кришной, он достигнет счастья в этой жизни, а в следующей жизни вернется в обитель Господа Вишну».\n' +
@@ -1034,7 +1114,8 @@ export const ekNames = [
   {
     name: 'Moksada',
     name_ru: 'Мокшада Экадаши',
-    description: '',
+    name_en: 'Moksada Ekadashi',
+    description_en: '',
     description_ru:
       'Мокшада экадаши происходит, когда луна растет в месяце ноябре/декабре. Слава этого экадаши описана в «Брахманда Пуране» в беседе Господа Кришны и Махараджа Юдхиштхиры.\n' +
       'Однажды Юдхиштхира спросил Господа Кришну: «Мой дорогой Кришна, каково имя экадаши периода растущей луны в месяце ноябре/декабре? Также, пожалуйста, расскажи мне подробно о процедуре соблюдения этого экадаши».\n' +
@@ -1055,5 +1136,74 @@ export const ekNames = [
       'В подтверждение слов Парваты Муни, отец царя был сопровождён в рай, а полубоги осыпали его цветами. Пока он восходил в рай, он неустанно благословлял своего сына Вайкханасу всяческими благословениями.\n' +
       'О, царь, человек, должным образом следующий этому Мокшада, избавляется от всех последствий былых грехов».\n' +
       'В заключении Шри Кришна сказал, что практически невозможно определить невероятное благо от соблюдения с верой этого экадаши. Личность может немедленно переместиться из ада в рай. А если человек соблюдает эти экадаши для своей пользы, он может пойти к Богу.'
+  },
+  {
+    name: 'Varuthini',
+    name_ru: 'Вирутхини Экадаши',
+    name_en: 'Varuthini Ekadashi',
+    description_en:
+      'Sri Yudhisthira Maharaj said, "Oh Vasudeva, I offer my most humble obeisances unto You.\n' +
+      '\n' +
+      'Please now describe to me the Ekadasi of the dark fortnight (krishna paksha) of the month of Vaisakha (April-May), including its specific merits and influence."\n' +
+      '\n' +
+      'Lord Sri Krishna replied, "Oh King, in this world and the next, the most auspicious and magnanimous Ekadasi is Varathini Ekadasi, which occurs during the dark fortnight of the month of Vaisakha.\n' +
+      '\n' +
+      'Whosoever observes a complete fast on this sacred day has his sins completely removed, obtains continuous happiness, and achieves all good fortune.\n' +
+      'Fasting on Varathini Ekadasi makes even an unfortunate woman fortunate.\n' +
+      'Upon anyone who observes it, this Ekadasi bestows material enjoyment in this life and liberation after the death of this present body.\n' +
+      '\n' +
+      'It destroys the sins of all and saves people from the miseries of repeated rebirth.\n' +
+      'By observing this Ekadasi properly, King Mandhata was liberated.\n' +
+      '\n' +
+      'Many other kings also benefited from observing it, kings such as Maharaja Dhundhumara, in the Ikshvaku dynasty, who became free from leprosy resulting from the curse that Lord Shiva had imposed upon him as a punishment.\n' +
+      '\n' +
+      'Whatever merit one obtains by performing austerities and penances for ten thousand years is achieved by a person who observes Varuthinii Ekadasi.\n' +
+      '\n' +
+      'The merit one achieves by donating a great amount of gold during a solar eclipse at Kurukshetra is gained by one who observes this one Ekadasi with love and devotion, and certainly attains his goals in this life and the next.\n' +
+      'In short, this Ekadasi is pure and very enlivening and the destroyer of all sins.\n' +
+      'Better than giving horses in charity is giving elephants, and better than giving elephants is giving land.\n' +
+      'But better still than giving land is the giving of sesame seeds, and better than that is giving of gold.\n' +
+      '\n' +
+      'Still better than giving gold is giving food grains for all the forefathers, demigods (devas), and human beings become satisfied by eating grains.\n' +
+      '\n' +
+      'Thus there is no better gift of charity than this in the past, present or future.\n' +
+      '\n' +
+      'Yet learned scholars have declared that giving away a young maiden in marriage to a worthy person is equal to giving away food grains in charity.\n' +
+      '\n' +
+      '\n' +
+      'Moreover, Lord Sri Krishna, the Supreme Personality of Godhead, has said that giving cows in charity is equal to giving food grains.\n' +
+      '\n' +
+      'Still better than all these charities is teaching spiritual knowledge to the ignorant.\n' +
+      '\n' +
+      'Yet all the merits one can attain by performing all these acts of charity are attained by one who fasts on the Varuthini Ekadasi.\n' +
+      '\n' +
+      'One who lives off the wealth of his daughters suffers a hellish condition until the inundation of the entire universe, Oh Bharata.\n' +
+      '\n' +
+      'Therefore one should be especially careful not to use the wealth of his daughter.\n' +
+      "Oh best of kings, any householder who takes his daughter's wealth out of greed, who tries to sell his daughter, or who takes money from the man to whom he has given his daughter in marriage such a householder becomes a lowly cat in his next life.\n" +
+      '\n' +
+      'Therefore it is said that whoever, as a sacred act of charity, gives away in marriage a maiden decorated with various ornaments, and who also gives a dowry with her, obtains merit that cannot be described even by Chitragupta, the chief secretary of Yamaraja in the heavenly planets.\n' +
+      '\n' +
+      'That very same merit, however, can be easily achieved by one who fasts on the Varuthini Ekadasi.\n' +
+      '\n' +
+      'The following things should be given up on the Dashami, (the tenth phase of the Moon), the day before the Ekadasi:\n' +
+      '\n' +
+      "Eating on bell-metal plates, eating any kind of urad-dahl, eating red-lentils, eating chick-peas, eating kondo (a grain that is primarily eaten by poor people and that resembles poppy seeds or agarpanthas seeds), eating spinach, eating honey, eating in another person's house/home, eating more than once, and participating in sex of any kind.\n" +
+      '\n' +
+      'On the Ekadasi itself one should give up the following:\n' +
+      '\n' +
+      "gambling, sports, sleeping during the daytime, betal nuts and its leaf, brushing one's teeth, spreading rumours, faultfinding, talking to the spiritually fallen, anger, and lying.\n" +
+      '\n' +
+      'On the Dwadasi the day after Ekadasi (the twelfth phase of the Moon), one should give up the following:\n' +
+      '\n' +
+      "eating on bell-metal plates, eating urad-dahl, red-lentils, or honey, lying, strenuous exercise or labour, eating more than once, any sexual activity, shaving the body, face or head, smearing oils on one's body, and eating in another's home.\n" +
+      '\n' +
+      'Lord Sri Krishna continued, "Whoever observes the Varuthini Ekadasi in this way becomes free from all sinful reactions and returns to the eternal, spiritual abode.\n' +
+      'One who worships Lord Janardana (Krishna) on this Ekadasi by staying awake throughout the entire night, also becomes free from all his previous sins and attains to the spiritual abode.\n' +
+      '\n' +
+      'Therefore, Oh king, he who is frightened of his accumulated sins and their attendant reactions, and thus of death itself, must observe Varuthini Ekadasi by fasting very strictly.\n' +
+      '\n' +
+      '"Finally, Oh noble Yudhisthira, he who hears or reads this glorification of the sacred Varuthini Ekadasi obtains the merit earned by donating one thousand cows in charity, and at last he returns home, to the Supreme abode of Lord Vishnu in the Vaikunthas.',
+    description_ru: ''
   }
 ];

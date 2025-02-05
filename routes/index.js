@@ -1,11 +1,12 @@
 import express from 'express';
-import { index, getEkadash, setMoonDays } from '../controllers/index.js';
+import { index, getEkadash, setMoonDays, convertDb } from '../controllers/index.js';
 import checkXApiKey from '../middlewares/checkXApiKey.js';
 
 const router = express.Router();
 
 router.get('/', index);
 router.get('/save', checkXApiKey, getEkadash);
-router.get('/moon', checkXApiKey, setMoonDays);
+router.get('/moon', setMoonDays);
+router.get('/convertDB', convertDb);
 
 export default router;

@@ -15,13 +15,16 @@ const EkNamesSchema = new Schema(
     },
     name_ru: {
       type: String,
-      required: true,
-      unique: true,
+      trim: true
+    },
+    name_en: {
+      type: String,
       trim: true
     },
     description: { type: String, default: null },
     description_ru: { type: String, default: null },
-    description_hi: { type: String, default: null }
+    description_hi: { type: String, default: null },
+    description_en: { type: String, default: null }
   },
   { timestamps: true }
 );

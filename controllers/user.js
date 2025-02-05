@@ -1,5 +1,5 @@
 import User from '../models/user.js';
-import { sendPushNotification } from './sendPushNotifications.js';
+import { sendPushNotification } from './notifications/api.notifications.js';
 
 export const getUser = async (req, res) => {
   const { deviceId } = req.params;

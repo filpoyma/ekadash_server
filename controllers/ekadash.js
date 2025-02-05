@@ -1,4 +1,7 @@
 import Ekadash from '../models/ekadash.js';
+import { getMonthStrByNum } from '../utils/helpers.js';
+import EkadashInfo from '../models/ekadashInfo.js';
+import Ekadashi from '../models/ekadashi.js';
 
 // import { generateSixDigitCode } from '../utils/math.utils';
 
@@ -6,10 +9,25 @@ export const getByYear = async (req, res) => {
   const year = req.query.year;
   try {
     const years = await Ekadash.findOne({ year });
+    const ekadash = await Ekadashi.findOne({ year }).populate('description_data');
+    console.log('file-ekadash.js ekadash:', ekadash.description_data);
     res.json({ status: true, years });
   } catch (err) {
     console.log('file-ekadashi.js err:', err);
     res.status(500).json({ status: false, message: 'Error getting ekadashi years' });
+  }
+};
+
+export const getByMonth = async (req, res) => {
+  const { year, month } = req.query;
+  try {
+    const ekadash = await Ekadash.findOne({ year });
+    const monthStr = getMonthStrByNum(parseInt(month));
+    const ekadashByMonth = ekadash.months[month];
+    res.json({ status: true, ekadash });
+  } catch (err) {
+    console.log('file-ekadashi.js err:', err);
+    res.status(500).json({ status: false, message: 'Error getting ekadashi month' });
   }
 };
 
