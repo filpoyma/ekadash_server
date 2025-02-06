@@ -9,22 +9,12 @@ const EkNamesSchema = new Schema(
       trim: true,
       unique: true
     },
-    name_hi: {
-      type: String,
-      trim: true
-    },
-    name_ru: {
-      type: String,
-      trim: true
-    },
-    name_en: {
-      type: String,
-      trim: true
-    },
-    description: { type: String, default: null },
-    description_ru: { type: String, default: null },
-    description_hi: { type: String, default: null },
-    description_en: { type: String, default: null }
+    name_hi: { type: String, default: '' },
+    name_ru: { type: String, default: '' },
+    name_en: { type: String, default: '' },
+    description_ru: { type: String, default: '' },
+    description_hi: { type: String, default: '' },
+    description_en: { type: String, default: '' }
   },
   { timestamps: true }
 );

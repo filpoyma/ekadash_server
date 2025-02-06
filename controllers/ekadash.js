@@ -6,12 +6,20 @@ import Ekadashi from '../models/ekadashi.js';
 // import { generateSixDigitCode } from '../utils/math.utils';
 
 export const getByYear = async (req, res) => {
-  const year = req.query.year;
   try {
-    const years = await Ekadash.findOne({ year });
-    const ekadash = await Ekadashi.findOne({ year }).populate('description_data');
-    console.log('file-ekadash.js ekadash:', ekadash.description_data);
-    res.json({ status: true, years });
+    const { year } = req.query;
+    const resp = await Ekadashi.find({ year }, null, { lean: true });
+    res.json({
+      status: true,
+      ekadashes: resp.map((ekadashi) => ({
+        id: ekadashi._id,
+        date: `${ekadashi.year}-${String(ekadashi.month).padStart(2, '0')}-${String(
+          ekadashi.day
+        ).padStart(2, '0')}`,
+        name: ekadashi.ekadasi_name,
+        exit_time: ekadashi.exit_time
+      }))
+    });
   } catch (err) {
     console.log('file-ekadashi.js err:', err);
     res.status(500).json({ status: false, message: 'Error getting ekadashi years' });
@@ -19,11 +27,21 @@ export const getByYear = async (req, res) => {
 };
 
 export const getByMonth = async (req, res) => {
-  const { year, month } = req.query;
   try {
-    const ekadash = await Ekadash.findOne({ year });
-    const monthStr = getMonthStrByNum(parseInt(month));
-    const ekadashByMonth = ekadash.months[month];
+    const { year, month } = req.query;
+    const ekadashes = await Ekadashi.find({ year, month });
+    res.json({ status: true, ekadashes });
+  } catch (err) {
+    console.log('file-ekadashi.js err:', err);
+    res.status(500).json({ status: false, message: 'Error getting ekadashi month' });
+  }
+};
+
+export const getByDay = async (req, res) => {
+  try {
+    const { year, month, day } = req.query;
+    const ekadash = await Ekadashi.findOne({ year, month, day }, null).populate('description_data');
+
     res.json({ status: true, ekadash });
   } catch (err) {
     console.log('file-ekadashi.js err:', err);

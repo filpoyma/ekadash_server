@@ -93,18 +93,16 @@ export const getEkadash = async (req, res) => {
 
 const months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
 
-// const  setEkadNames = (req, res) => {
-//   ekNames.map(async (item) => {
-//     try {
-//       console.log('file-index.js name:', item);
-//       const res = await EkadashInfo.create(item);
-//       console.log('file-index.js res:', res);
-//     } catch (err) {
-//       console.error('Error ekad:', err);
-//     }
-//   });
-//   res.end(`ekad saved.`);
-// };
+export const EkadashInfoCreate = async (req, res) => {
+  try {
+    const res = await EkadashInfo.create(ekNames);
+    console.log('file-index.js res:', res);
+  } catch (err) {
+    console.error('Error ekad:', err);
+  }
+
+  res.end(`ekad saved.`);
+};
 
 export const setMoonDays = async (req, res) => {
   try {
@@ -184,31 +182,34 @@ export const setMoonDays = async (req, res) => {
 };
 
 export const convertDb = async (req, res) => {
-  const ekadash = await Ekadash.findOne({ year: 2025 });
-  for (const month of months) {
-    for (let i = 1; i <= 31; i++) {
-      const info = ekadash.months[month].get(i.toString());
-      if (info) {
-        console.log('file-index.js info.ekadasi_name:', info.ekadasi_name);
-        const ekadashiInfo = await EkadashInfo.findOne({ name: info.ekadasi_name }, null, {
-          lean: false
-        });
-        if (!ekadashiInfo) continue;
+  for (let year = 2013; year <= 2043; year++) {
+    console.log('<<<<<<<<<year>>>>>>>>>>>>:', year);
+    const ekadash = await Ekadash.findOne({ year });
+    for (const month of months) {
+      for (let i = 1; i <= 31; i++) {
+        const info = ekadash.months[month].get(i.toString());
+        if (info) {
+          console.log('file-index.js info.ekadasi_name:', info.ekadasi_name);
+          const ekadashiInfo = await EkadashInfo.findOne({ name: info.ekadasi_name }, null, {
+            lean: false
+          });
+          if (!ekadashiInfo) throw new Error(`EkadashiInfo not found: ${info.ekadasi_name}`);
 
-        console.log('file-index.js ekadashiInfo:', ekadashiInfo?._id);
-        console.log('file-index.js ekadashiInfo:', ekadashiInfo.name);
-        const ekadashi = new Ekadashi({
-          year: 2025,
-          month: monthAbbreviations.indexOf(month) + 1,
-          day: i,
-          ekadasi_name: ekadashiInfo.name,
-          description_data: ekadashiInfo._id,
-          exit_time: info.exit_time
-        });
-        await ekadashi.save();
+          console.log('file-index.js ekadashiInfo:', ekadashiInfo?._id);
+          console.log('file-index.js ekadashiInfo:', ekadashiInfo.name);
+          const ekadashi = new Ekadashi({
+            year,
+            month: monthAbbreviations.indexOf(month) + 1,
+            day: i,
+            ekadasi_name: ekadashiInfo.name,
+            description_data: ekadashiInfo._id,
+            exit_time: info.exit_time
+          });
+          await ekadashi.save();
+        }
+        // console.log('file-index.js info:', info);
       }
-      // console.log('file-index.js info:', info);
     }
+    res.end(`convert saved.`);
   }
-  res.end(`convert saved.`);
 };
