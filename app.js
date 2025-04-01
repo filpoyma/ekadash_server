@@ -13,6 +13,7 @@ import ekadashRouter from './routes/ekadash.js';
 import cityRouter from './routes/city.js';
 import authRouter from './routes/auth.js';
 import userRouter from './routes/user.js';
+import logsRouter from './routes/logs.js';
 
 import checkXApiKey from './middlewares/checkXApiKey.js';
 import checkAuth from './middlewares/checkAuth.js';
@@ -24,9 +25,6 @@ const __dirname = import.meta.dirname;
 // Используем прокси, и ему можно доверять
 app.enable('trust proxy');
 
-// Шаблонизатор
-// На случай отсутствия нормального клиента
-// app.set('views', path.join(__dirname, 'views'));
 app.set('trust proxy', 1);
 
 // app.use(cors());
@@ -55,7 +53,7 @@ if (!isProd) app.use(morgan('dev'));
 // Установка лимита запросов на АПИ с одного IP
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
-  limit: 100, // Limit each IP to 100 requests per `window` (here, per 15 minutes).
+  limit: 500, // Limit each IP to 100 requests per `window` (here, per 15 minutes).
   standardHeaders: 'draft-7', // draft-6: `RateLimit-*` headers; draft-7: combined `RateLimit` header
   legacyHeaders: false, // Disable the `X-RateLimit-*` headers.
   message: 'Too many requests from this IP, please try again later.'
@@ -96,6 +94,7 @@ app.use((req, res, next) => {
 });
 
 app.use('/', index);
+app.use('/logs', logsRouter);
 app.use(checkXApiKey);
 app.use(checkAuth);
 app.use('/auth', authRouter);

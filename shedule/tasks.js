@@ -15,7 +15,7 @@ export const ekadashiPushNotificationsSender = async () => {
   for (const user of users) {
     const nowUserTz = dayjs().tz(user.timezone);
     // Проверяем, 11:00 ли сейчас по времени пользователя
-    if (nowUserTz.format('HH:mm') !== '08:47') continue;
+    if (nowUserTz.format('HH:mm') !== '11:00') continue;
 
     const daysRemind = user.daysRemindPush;
 
