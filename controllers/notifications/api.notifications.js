@@ -16,6 +16,7 @@ export const sendPushNotification = async (devicesIds, dataMessage) => {
     include_external_user_ids: userIdsArray,
     contents: { en: dataMessage.message || 'You have a new notification!' },
     headings: { en: dataMessage.title || 'New Notification' },
+    data: dataMessage.data || {}, // Include custom data here
     channel_for_external_user_ids: 'push'
   };
 
