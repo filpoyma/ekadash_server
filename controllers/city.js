@@ -12,7 +12,7 @@ export const getByName = async (req, res) => {
 
     res.json(cities);
   } catch (err) {
-    logger.err(`Error searching cities: ${err}`);
+    logger.error(`Error searching cities: ${err}`);
     res.status(500).send('Internal Server Error');
   }
 };

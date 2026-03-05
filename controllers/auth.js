@@ -10,7 +10,7 @@ export const signUp = async (req, res) => {
     await user.save();
     res.json(user);
   } catch (err) {
-    logger.err(`Error create User: ${err}`);
+    logger.error(`Error create User: ${err}`);
     res.status(500).send(`Error create User: ${err.message}`);
   }
 };
@@ -22,7 +22,7 @@ export const signIn = async (req, res) => {
     if (user) return res.json(user);
     return res.json(null);
   } catch (err) {
-    logger.err(`Error create User: ${err}`);
+    logger.error(`Error create User: ${err}`);
     res.status(500).send(err);
   }
 };

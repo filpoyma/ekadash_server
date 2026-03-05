@@ -41,8 +41,8 @@ export const getEkadash = async (req, res) => {
       const response = await fetch(`https://ekadasi.info/api/years/${i}`);
       const ekadashi = await response.json();
       logger.info(`'file-index.js ekadashiId:', ${ekadashi.id}`);
-      logger.info(`'file-index.js ekadashi.value:', ${ ekadashi.value }`);
-      logger.info(`'file-index.js ekadashi:', ${ ekadashi }`);
+      logger.info(`'file-index.js ekadashi.value:', ${ekadashi.value}`);
+      logger.info(`'file-index.js ekadashi:', ${ekadashi}`);
       const ekadashas = new Ekadash({
         id: ekadashi.id,
         year: ekadashi.value,
@@ -66,7 +66,7 @@ export const getEkadash = async (req, res) => {
       // await ekadashas.save();
       // await new Promise((resolve) => setTimeout(resolve, 2000));
     } catch (err) {
-      logger.err(`Error ekadashi: ${err}`);
+      logger.error(`Error ekadashi: ${err}`);
     }
   }
   res.end(`Ekadashi saved.`);
@@ -99,7 +99,7 @@ export const EkadashInfoCreate = async (req, res) => {
     const res = await EkadashInfo.create(ekNames);
     logger.info(`'file-index.js res:', ${res}`);
   } catch (err) {
-    logger.err(`Error EkadashInfoCreate: ${err}`);
+    logger.error(`Error EkadashInfoCreate: ${err}`);
   }
 
   res.end(`ekad saved.`);
@@ -177,7 +177,7 @@ export const setMoonDays = async (req, res) => {
 
     res.end(`moon saved.`);
   } catch (err) {
-    logger.err(err);
+    logger.error(err);
     res.status(500).send(JSON.stringify(err.message));
   }
 };

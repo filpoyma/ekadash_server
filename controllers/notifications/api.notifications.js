@@ -50,6 +50,6 @@ export const sendPushNotification = async (devicesIds, dataMessage) => {
     console.log('Notification sent successfully:', data);
     return data;
   } catch (error) {
-    logger.err(`Error sending notification: ${error.message}`);
+    logger.error(`Error sending notification: ${error.message}`);
   }
 };

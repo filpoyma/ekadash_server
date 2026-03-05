@@ -19,7 +19,7 @@ export const getByYear = async (req, res) => {
       }))
     });
   } catch (err) {
-    logger.err(`getByYear err: ${err}`);
+    logger.error(`getByYear err: ${err}`);
     res.status(500).json({ status: false, message: 'Error getting ekadashi years' });
   }
 };
@@ -30,7 +30,7 @@ export const getByMonth = async (req, res) => {
     const ekadashes = await Ekadashi.find({ year, month });
     res.json({ status: true, ekadashes });
   } catch (err) {
-    logger.err(`getByMonth err: ${err}`);
+    logger.error(`getByMonth err: ${err}`);
     res.status(500).json({ status: false, message: 'Error getting ekadashi month' });
   }
 };
@@ -42,7 +42,7 @@ export const getByDay = async (req, res) => {
 
     res.json({ status: true, ekadash });
   } catch (err) {
-    logger.err(`getByDay err: ${err}`);
+    logger.error(`getByDay err: ${err}`);
     res.status(500).json({ status: false, message: 'Error getting ekadashi month' });
   }
 };
@@ -107,7 +107,7 @@ export const getByDay = async (req, res) => {
 //       res.status(401).json({ status: false, message: 'Incorrect code.' });
 //     }
 //   } catch (err) {
-//     logger.err('verifyOtp error', err);
+//     logger.error('verifyOtp error', err);
 //     res.status(401).json({ status: false, message: 'Verification error.' });
 //   }
 // };

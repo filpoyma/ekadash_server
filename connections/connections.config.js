@@ -8,7 +8,7 @@ const PORT = config.port;
 const dbConnect = () => {
   logger.info('Connecting to DB...');
   if (!dbUrl) {
-    logger.err('MONGO_URI is required.');
+    logger.error('MONGO_URI is required.');
     process.exit(1);
   }
   mongoose
@@ -18,12 +18,12 @@ const dbConnect = () => {
     .then((conn) => {
       logger.info(`MongoDB Connected: ${conn.connection?.host}`);
     })
-    .catch(logger.err);
+    .catch(logger.error);
 };
 
 const serverListen = (app) => {
   if (!PORT) {
-    logger.err('PORT is required.');
+    logger.error('PORT is required.');
     process.exit(1);
   }
   app.listen(PORT, () => {
