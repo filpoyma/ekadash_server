@@ -1,4 +1,5 @@
 import User from '../models/user.js';
+import logger from '../utils/logger.js';
 
 export const signUp = async (req, res) => {
   const { deviceId, language, timezone } = req.body;
@@ -9,7 +10,7 @@ export const signUp = async (req, res) => {
     await user.save();
     res.json(user);
   } catch (err) {
-    console.error('Error create User:', err);
+    logger.err(`Error create User: ${err}`);
     res.status(500).send(`Error create User: ${err.message}`);
   }
 };
@@ -21,7 +22,7 @@ export const signIn = async (req, res) => {
     if (user) return res.json(user);
     return res.json(null);
   } catch (err) {
-    console.error('Error create User:', err);
+    logger.err(`Error create User: ${err}`);
     res.status(500).send(err);
   }
 };

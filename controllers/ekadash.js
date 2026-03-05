@@ -1,7 +1,5 @@
-import Ekadash from '../models/ekadash.js';
-import { getMonthStrByNum } from '../utils/helpers.js';
-import EkadashInfo from '../models/ekadashInfo.js';
 import Ekadashi from '../models/ekadashi.js';
+import logger from '../utils/logger.js';
 
 // import { generateSixDigitCode } from '../utils/math.utils';
 
@@ -21,7 +19,7 @@ export const getByYear = async (req, res) => {
       }))
     });
   } catch (err) {
-    console.log('file-ekadashi.js err:', err);
+    logger.err(`getByYear err: ${err}`);
     res.status(500).json({ status: false, message: 'Error getting ekadashi years' });
   }
 };
@@ -32,7 +30,7 @@ export const getByMonth = async (req, res) => {
     const ekadashes = await Ekadashi.find({ year, month });
     res.json({ status: true, ekadashes });
   } catch (err) {
-    console.log('file-ekadashi.js err:', err);
+    logger.err(`getByMonth err: ${err}`);
     res.status(500).json({ status: false, message: 'Error getting ekadashi month' });
   }
 };
@@ -44,7 +42,7 @@ export const getByDay = async (req, res) => {
 
     res.json({ status: true, ekadash });
   } catch (err) {
-    console.log('file-ekadashi.js err:', err);
+    logger.err(`getByDay err: ${err}`);
     res.status(500).json({ status: false, message: 'Error getting ekadashi month' });
   }
 };
@@ -109,7 +107,7 @@ export const getByDay = async (req, res) => {
 //       res.status(401).json({ status: false, message: 'Incorrect code.' });
 //     }
 //   } catch (err) {
-//     console.error('verifyOtp error', err);
+//     logger.err('verifyOtp error', err);
 //     res.status(401).json({ status: false, message: 'Verification error.' });
 //   }
 // };

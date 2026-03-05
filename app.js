@@ -4,22 +4,14 @@ import express from 'express';
 import expressMongoSanitize from 'express-mongo-sanitize';
 import { rateLimit } from 'express-rate-limit';
 import helmet from 'helmet';
-import hpp from 'hpp';
 import morgan from 'morgan';
 import path from 'path';
-
-import index from './routes/index.js';
-import ekadashRouter from './routes/ekadash.js';
-import cityRouter from './routes/city.js';
-import authRouter from './routes/auth.js';
-import userRouter from './routes/user.js';
-import logsRouter from './routes/logs.js';
-
-import checkXApiKey from './middlewares/checkXApiKey.js';
-import checkAuth from './middlewares/checkAuth.js';
+import routes from './routes/index.js';
+import logger from './utils/logger.js';
+import config from './config/config.js';
 
 const app = express();
-const isProd = process.env.ENVIRONMENT === 'prod';
+const isProd = process.env.NODE_ENV === 'production';
 const __dirname = import.meta.dirname;
 
 // Используем прокси, и ему можно доверять
@@ -89,17 +81,11 @@ app.use(expressMongoSanitize());
 app.use(compression());
 
 app.use((req, res, next) => {
-  console.log(req.method, req.originalUrl);
+  if(config.isDev) logger.info(`${req.method}, ${req.originalUrl}`);
   next();
 });
 
-app.use('/', index);
-app.use('/logs', logsRouter);
-app.use(checkXApiKey);
-app.use(checkAuth);
-app.use('/auth', authRouter);
-app.use('/user', userRouter);
-app.use('/ekadash', ekadashRouter);
-app.use('/city', cityRouter);
+// Mount API routes
+app.use('/ekadash_api/v1', routes);
 
 export default app;

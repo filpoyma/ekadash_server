@@ -3,6 +3,7 @@ import Moon from '../models/moon.js';
 import EkadashInfo from '../models/ekadashInfo.js';
 import { ekNames } from '../models/seed.js';
 import Ekadashi from '../models/ekadashi.js';
+import logger from '../utils/logger.js';
 
 const monthAbbreviations = [
   'jan',
@@ -39,9 +40,9 @@ export const getEkadash = async (req, res) => {
     try {
       const response = await fetch(`https://ekadasi.info/api/years/${i}`);
       const ekadashi = await response.json();
-      console.log('file-index.js ekadashi:', ekadashi.id);
-      console.log('file-index.js ekadashi.value:', ekadashi.value);
-      console.log('file-index.js ekadashi:', ekadashi);
+      logger.info(`'file-index.js ekadashiId:', ${ekadashi.id}`);
+      logger.info(`'file-index.js ekadashi.value:', ${ ekadashi.value }`);
+      logger.info(`'file-index.js ekadashi:', ${ ekadashi }`);
       const ekadashas = new Ekadash({
         id: ekadashi.id,
         year: ekadashi.value,
@@ -65,7 +66,7 @@ export const getEkadash = async (req, res) => {
       // await ekadashas.save();
       // await new Promise((resolve) => setTimeout(resolve, 2000));
     } catch (err) {
-      console.error('Error ekadashi:', err);
+      logger.err(`Error ekadashi: ${err}`);
     }
   }
   res.end(`Ekadashi saved.`);
@@ -96,9 +97,9 @@ const months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', '
 export const EkadashInfoCreate = async (req, res) => {
   try {
     const res = await EkadashInfo.create(ekNames);
-    console.log('file-index.js res:', res);
+    logger.info(`'file-index.js res:', ${res}`);
   } catch (err) {
-    console.error('Error ekad:', err);
+    logger.err(`Error EkadashInfoCreate: ${err}`);
   }
 
   res.end(`ekad saved.`);
@@ -120,9 +121,9 @@ export const setMoonDays = async (req, res) => {
         );
         if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
         const moonDays = await res.json();
-        console.log('file-index.js year, month:', year, month);
+        logger.info('file-index.js year, month:', year, month);
         const datainsert = await Moon.insertMany(moonDays.days);
-        console.log('All moon data saved successfully.', datainsert.length);
+        logger.info('All moon data saved successfully.', datainsert.length);
         await new Promise((resolve) => setTimeout(resolve, 1000));
 
         const ekadashDaysByMonth = Array.from(
@@ -176,7 +177,7 @@ export const setMoonDays = async (req, res) => {
 
     res.end(`moon saved.`);
   } catch (err) {
-    console.error(err);
+    logger.err(err);
     res.status(500).send(JSON.stringify(err.message));
   }
 };

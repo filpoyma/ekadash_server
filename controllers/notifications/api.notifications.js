@@ -1,3 +1,6 @@
+import config from '../../config/config.js';
+import logger from '../../utils/logger.js';
+
 export const sendPushNotification = async (devicesIds, dataMessage) => {
   if (!devicesIds) return;
   const userIdsArray = Array.isArray(devicesIds) ? devicesIds : [devicesIds];
@@ -7,12 +10,12 @@ export const sendPushNotification = async (devicesIds, dataMessage) => {
   const url = 'https://api.onesignal.com/notifications?c=push';
   const headers = {
     accept: 'application/json',
-    Authorization: process.env.ONESIGNAL_REST_API_KEY,
+    Authorization: config.oneSignalRestApiKey,
     'content-type': 'application/json'
   };
 
   const body = {
-    app_id: process.env.ONESIGNAL_APP_ID,
+    app_id: config.oneSignalAppId,
     include_external_user_ids: userIdsArray,
     contents: { en: dataMessage.message || 'You have a new notification!' },
     headings: { en: dataMessage.title || 'New Notification' },
@@ -47,6 +50,6 @@ export const sendPushNotification = async (devicesIds, dataMessage) => {
     console.log('Notification sent successfully:', data);
     return data;
   } catch (error) {
-    console.error('Error sending notification:', error.message);
+    logger.err(`Error sending notification: ${error.message}`);
   }
 };

@@ -75,3 +75,4 @@ export const getNotificationsVariants = (locale = 'en', date = '', name = '') =>
     message: variant.message.replace(/EKADASHINAME/g, name).replace(/DATE/g, date)
   };
 };
+
