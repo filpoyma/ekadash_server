@@ -1,6 +1,7 @@
 import mongoose from 'mongoose';
 import config from '../config/config.js';
 import logger from '../utils/logger.js';
+import { getLocalIP } from '../utils/helpers.js';
 
 const dbUrl = config.mongoUrl;
 const PORT = config.port;
@@ -28,6 +29,7 @@ const serverListen = (app) => {
   }
   app.listen(PORT, () => {
     logger.info(`App running on port http://localhost:${PORT}`);
+    logger.info(`App running on port http://${getLocalIP()}:${PORT}`);
   });
 };
 

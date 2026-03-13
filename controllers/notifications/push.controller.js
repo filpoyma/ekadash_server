@@ -6,6 +6,8 @@ import { sendPushNotification } from './api.notifications.js';
 export const sendNotification = async ({ users, infoEkadash }) => {
   const { name, date } = infoEkadash;
   const ekadashInfo = await EkadashInfo.findOne({ name }, null, { lean: true });
+  if (!ekadashInfo) return;
+
   const devicesIdsRu = users.filter((user) => user.language === 'ru').map((user) => user.deviceId);
   const devicesIdsEn = users.filter((user) => user.language === 'en').map((user) => user.deviceId);
   // const devicesIdsHi = users.filter((user) => user.language === 'hi').map((user) => user.deviceId);

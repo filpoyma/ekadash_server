@@ -1,47 +1,51 @@
-import Ekadash from '../models/ekadash.js';
+import Ekadashi from '../models/ekadashi.js';
 import { sendNotification } from '../controllers/notifications/push.controller.js';
 import dayjs from 'dayjs';
 import User from '../models/user.js';
 
 export const ekadashiPushNotificationsSender = async () => {
-  const users = await User.find({ notifiedToday: false }, null, { lean: true });
+  const dateKey = (y, m, d) => `${y}-${m}-${d}`;
+
+  const users = await User.find({ notifiedToday: false, daysRemindPush: { $gt: 0 } }, null, {
+    lean: true
+  });
 
   const now = dayjs();
   const year = now.year();
-  const ekadash = await Ekadash.findOne({ year });
+  const ekadashiDays = await Ekadashi.find({ year: { $in: [year, year + 1] } }, null, {
+    lean: true
+  });
+  const ekadashiByDate = new Map(ekadashiDays.map((d) => [dateKey(d.year, d.month, d.day), d]));
   const pushNotifUsers = [];
   const infoEkadash = { name: '', date: '' };
-
   for (const user of users) {
     const nowUserTz = dayjs().tz(user.timezone);
-    // Проверяем, 11:00 ли сейчас по времени пользователя
-    if (nowUserTz.format('HH:mm') !== '11:00') continue;
+    if (nowUserTz.format('HH:mm') !== '11:11') continue;
 
     const daysRemind = user.daysRemindPush;
 
-    // Проверяем Экадаши на ближайшие daysRemind дней
-    for (let i = 0; i < daysRemind; i++) {
+    for (let i = 1; i <= daysRemind; i++) {
       const checkDate = nowUserTz.add(i, 'day');
-      // const day = checkDate.date().toString();
-      const day = '8';
-      const month = checkDate.format('MMM').toLowerCase();
+      const y = checkDate.year();
+      const m = checkDate.month() + 1;
+      const d = checkDate.date();
+      const dayRecord = ekadashiByDate.get(dateKey(y, m, d));
 
-      if (ekadash.months[month] && ekadash.months[month].get(day)) {
-        const dayInfo = ekadash.months[month].get(day);
-        infoEkadash.name = dayInfo.ekadasi_name;
+      if (dayRecord) {
+        infoEkadash.name = dayRecord.ekadasi_name;
         infoEkadash.date = checkDate.format('DD.MM.YYYY');
-
         pushNotifUsers.push(user);
-        break; // Прерываем цикл, так как нашли ближайший Экадаши
+        break;
       }
     }
   }
+
   if (pushNotifUsers.length) {
     await sendNotification({ users: pushNotifUsers, infoEkadash });
-    // await User.updateMany(
-    //   { _id: { $in: pushNotifUsers.map((user) => user._id) } },
-    //   { notifiedToday: true }
-    // );
+    await User.updateMany(
+      { _id: { $in: pushNotifUsers.map((u) => u._id) } },
+      { notifiedToday: true }
+    );
   }
 };
 
