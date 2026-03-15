@@ -5,7 +5,6 @@ import User from '../models/user.js';
 
 export const ekadashiPushNotificationsSender = async () => {
   const dateKey = (y, m, d) => `${y}-${m}-${d}`;
-  console.log('ekadashiPushNotificationsSender');
 
   const users = await User.find({ notifiedToday: false, daysRemindPush: { $gt: 0 } }, null, {
     lean: true
