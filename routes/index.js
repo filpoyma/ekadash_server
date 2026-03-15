@@ -5,6 +5,7 @@ import logsRouter from './logs.js';
 import authRouter from './auth.js';
 import userRouter from './user.js';
 import ekadashRouter from './ekadash.js';
+import ekadashInfoRouter from './ekadashInfo.js';
 import cityRouter from './city.js';
 
 const router = express.Router();
@@ -28,6 +29,7 @@ router.use(checkAuth);
 router.use('/auth', authRouter);
 router.use('/user', userRouter);
 router.use('/ekadash', ekadashRouter);
+router.use('/ekadash-info', ekadashInfoRouter);
 router.use('/city', cityRouter);
 
 export default router;

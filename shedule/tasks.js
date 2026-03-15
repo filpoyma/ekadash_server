@@ -5,6 +5,7 @@ import User from '../models/user.js';
 
 export const ekadashiPushNotificationsSender = async () => {
   const dateKey = (y, m, d) => `${y}-${m}-${d}`;
+  console.log('ekadashiPushNotificationsSender');
 
   const users = await User.find({ notifiedToday: false, daysRemindPush: { $gt: 0 } }, null, {
     lean: true
@@ -19,6 +20,9 @@ export const ekadashiPushNotificationsSender = async () => {
   const pushNotifUsers = [];
   const infoEkadash = { name: '', date: '' };
   for (const user of users) {
+    //for debug
+    // console.log('>>>>>>>>>file-tasks.js sendNotification for debug<<<<<');
+    // await sendNotification({ users: [user], infoEkadash: { name: 'Saphala', date: '11-11-2026' } });
     const nowUserTz = dayjs().tz(user.timezone);
     if (nowUserTz.format('HH:mm') !== '11:11') continue;
 

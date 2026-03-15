@@ -23,17 +23,6 @@ export const sendPushNotification = async (devicesIds, dataMessage) => {
     channel_for_external_user_ids: 'push'
   };
 
-  // const body = {
-  //   app_id: process.env.ONESIGNAL_APP_ID,
-  //   include_external_user_ids: userIdsArray,
-  //   filters: [
-  //     // Filter for users who have an active session (subscribed users)
-  //     { field: 'last_session', relation: '>', value: '0' } // Users who have had a session in the last X days
-  //   ],
-  //   contents: { en: 'Hello, this is a test push notification!' },
-  //   headings: { en: 'Test Notification' }
-  // };
-
   try {
     const response = await fetch(url, {
       method: 'POST',

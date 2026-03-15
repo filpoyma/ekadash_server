@@ -10,13 +10,17 @@ export const sendNotification = async ({ users, infoEkadash }) => {
 
   const devicesIdsRu = users.filter((user) => user.language === 'ru').map((user) => user.deviceId);
   const devicesIdsEn = users.filter((user) => user.language === 'en').map((user) => user.deviceId);
-  // const devicesIdsHi = users.filter((user) => user.language === 'hi').map((user) => user.deviceId);
+  const devicesIdsHi = users.filter((user) => user.language === 'hi').map((user) => user.deviceId);
   sendPushNotification(
     devicesIdsRu,
-    getNotificationsVariants('ru', date, ekadashInfo.name_ru)
+    getNotificationsVariants('ru', date, ekadashInfo.name_ru, ekadashInfo._id, ekadashInfo.name)
   ).catch(console.error);
   sendPushNotification(
     devicesIdsEn,
-    getNotificationsVariants('en', date, ekadashInfo.name_en)
+    getNotificationsVariants('en', date, ekadashInfo.name_en, ekadashInfo._id, ekadashInfo.name)
+  ).catch(console.error);
+  sendPushNotification(
+    devicesIdsHi,
+    getNotificationsVariants('hi', date, ekadashInfo.name_hi, ekadashInfo._id, ekadashInfo.name)
   ).catch(console.error);
 };

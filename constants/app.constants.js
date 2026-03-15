@@ -66,11 +66,12 @@ const pushNotificationsVariants = {
   ]
 };
 
-export const getNotificationsVariants = (locale = 'en', date = '', name = '') => {
+export const getNotificationsVariants = (locale = 'en', date = '', name = '', ekadashInfoId = '', uniqName = '') => {
   const random = Math.floor(Math.random() * 6);
   const variant = pushNotificationsVariants[locale][random];
 
   return {
+    data: {ekadashInfoId, uniqName},
     title: variant.title.replace(/EKADASHINAME/g, name).replace(/DATE/g, date),
     message: variant.message.replace(/EKADASHINAME/g, name).replace(/DATE/g, date)
   };
