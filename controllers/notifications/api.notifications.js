@@ -6,7 +6,6 @@ export const sendPushNotification = async (devicesIds, dataMessage) => {
   const userIdsArray = Array.isArray(devicesIds) ? devicesIds : [devicesIds];
   if (!userIdsArray.length) return;
 
-  console.log(' sendPushNotification: >>>>>>', devicesIds, dataMessage);
   const url = 'https://api.onesignal.com/notifications?c=push';
   const headers = {
     accept: 'application/json',
@@ -36,7 +35,7 @@ export const sendPushNotification = async (devicesIds, dataMessage) => {
     }
 
     const data = await response.json();
-    console.log('Notification sent successfully:', data);
+    if(config.isDev) console.log('Notification sent successfully:', data);
     return data;
   } catch (error) {
     logger.error(`Error sending notification: ${error.message}`);
