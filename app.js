@@ -6,9 +6,12 @@ import { rateLimit } from 'express-rate-limit';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import path from 'path';
+import swaggerUi from 'swagger-ui-express';
+
 import routes from './routes/index.js';
 import logger from './utils/logger.js';
 import config from './config/config.js';
+import openApiSpec from './openapi.json' with { type: 'json' };
 
 const app = express();
 const isProd = process.env.NODE_ENV === 'production';
@@ -84,6 +87,9 @@ app.use((req, res, next) => {
   if(config.isDev) logger.info(`${req.method}, ${req.originalUrl}`);
   next();
 });
+
+// API documentation (Swagger UI)
+app.use('/ekadash_api/docs', swaggerUi.serve, swaggerUi.setup(openApiSpec, { customSiteTitle: 'Ekadash API' }));
 
 // Mount API routes
 app.use('/ekadash_api/v1', routes);
