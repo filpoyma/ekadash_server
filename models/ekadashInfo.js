@@ -14,7 +14,11 @@ const EkNamesSchema = new Schema(
     name_en: { type: String, default: '' },
     description_ru: { type: String, default: '' },
     description_hi: { type: String, default: '' },
-    description_en: { type: String, default: '' }
+    description_en: { type: String, default: '' },
+    characteristics_ru: { type: String, default: '' },
+    characteristics_hi: { type: String, default: '' },
+    characteristics_en: { type: String, default: '' },
+    isImportant: { type: Boolean, default: false }
   },
   { timestamps: true }
 );

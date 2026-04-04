@@ -8,9 +8,7 @@ import logger from '../utils/logger.js';
 export const getAll = async (req, res) => {
   try {
     const limit = Math.min(parseInt(req.query.limit, 10) || 100, 500);
-    const items = await EkadashInfo.find({}, null, { lean: true })
-      .limit(limit)
-      .sort({ name: 1 });
+    const items = await EkadashInfo.find({}, null, { lean: true }).limit(limit).sort({ name: 1 });
 
     res.json({
       status: true,
@@ -24,8 +22,8 @@ export const getAll = async (req, res) => {
         description_hi: item.description_hi,
         description_en: item.description_en,
         createdAt: item.createdAt,
-        updatedAt: item.updatedAt,
-      })),
+        updatedAt: item.updatedAt
+      }))
     });
   } catch (err) {
     logger.error(`getAll ekadashInfo err: ${err}`);
@@ -57,8 +55,8 @@ export const getById = async (req, res) => {
         description_hi: item.description_hi,
         description_en: item.description_en,
         createdAt: item.createdAt,
-        updatedAt: item.updatedAt,
-      },
+        updatedAt: item.updatedAt
+      }
     });
   } catch (err) {
     logger.error(`getById ekadashInfo err: ${err}`);
@@ -88,17 +86,9 @@ export const getByName = async (req, res) => {
     res.json({
       status: true,
       data: {
-        id: item._id,
-        name: item.name,
-        name_hi: item.name_hi,
-        name_ru: item.name_ru,
-        name_en: item.name_en,
-        description_ru: item.description_ru,
-        description_hi: item.description_hi,
-        description_en: item.description_en,
-        createdAt: item.createdAt,
-        updatedAt: item.updatedAt,
-      },
+        ...item,
+        id: item._id
+      }
     });
   } catch (err) {
     logger.error(`getByName ekadashInfo err: ${err}`);
