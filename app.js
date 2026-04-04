@@ -43,7 +43,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(helmet());
 
 // В режиме разработки добавляем логгер - в консоль , в режиме прод - в файл access.log
-if (!isProd) app.use(morgan('dev'));
+if (config.isDev) app.use(morgan('dev'));
 
 // Установка лимита запросов на АПИ с одного IP
 const limiter = rateLimit({
@@ -89,7 +89,7 @@ app.use((req, res, next) => {
 });
 
 // API documentation (Swagger UI)
-app.use('/ekadash_api/docs', swaggerUi.serve, swaggerUi.setup(openApiSpec, { customSiteTitle: 'Ekadash API' }));
+if(config.isDev) app.use('/ekadash_api/docs', swaggerUi.serve, swaggerUi.setup(openApiSpec, { customSiteTitle: 'Ekadash API' }));
 
 // Mount API routes
 app.use('/ekadash_api/v1', routes);
