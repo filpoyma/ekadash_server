@@ -1,6 +1,17 @@
 import EkadashInfo from '../models/ekadashInfo.js';
 import logger from '../utils/logger.js';
 
+/** Mongo projection: only localized fields for `lang` + common fields. */
+
+const buildProjection = (lang) => {
+  if (!lang) return undefined;
+  const projection = { name: 1, isImportant: 1, createdAt: 1, updatedAt: 1 };
+  ['name', 'description', 'characteristics'].forEach((prefix) => {
+    projection[`${prefix}_${lang}`] = 1;
+  });
+  return projection;
+};
+
 /**
  * Get all ekadashi info records.
  * Query: limit (optional, default 100, max 500)
@@ -61,20 +72,18 @@ export const getById = async (req, res) => {
 export const getByName = async (req, res) => {
   try {
     const name = req.query.name || req.params.name;
+    const language = res.locals.language;
 
     if (!name) return res.status(400).json({ status: false, message: 'Name is required' });
 
     const regex = new RegExp(`^${name.trim()}$`, 'i');
-    const item = await EkadashInfo.findOne({ name: regex }).lean();
+    const item = await EkadashInfo.findOne({ name: regex }, buildProjection(language)).lean();
 
     if (!item) return res.status(404).json({ status: false, message: 'Ekadashi info not found' });
 
     res.json({
       status: true,
-      data: {
-        ...item,
-        id: item._id
-      }
+      data: { ...item, id: item._id }
     });
   } catch (err) {
     logger.error(`getByName ekadashInfo err: ${err}`);

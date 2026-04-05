@@ -7,6 +7,7 @@ import userRouter from './user.js';
 import ekadashRouter from './ekadash.js';
 import ekadashInfoRouter from './ekadashInfo.js';
 import cityRouter from './city.js';
+import setLanguage from '../middlewares/setLanguage.js';
 
 const router = express.Router();
 
@@ -18,7 +19,7 @@ router.get('/health', (req, res) => {
   res.status(200).json({
     status: 'success',
     message: 'API is running',
-    time: new Date().toISOString(),
+    time: new Date().toISOString()
   });
 });
 
@@ -26,6 +27,7 @@ router.get('/health', (req, res) => {
 router.use('/logs', logsRouter);
 router.use(checkXApiKey);
 router.use(checkAuth);
+router.use(setLanguage);
 router.use('/auth', authRouter);
 router.use('/user', userRouter);
 router.use('/ekadash', ekadashRouter);
