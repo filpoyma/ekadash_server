@@ -39,23 +39,13 @@ export const getById = async (req, res) => {
     const { id } = req.params;
     const item = await EkadashInfo.findById(id).lean();
 
-    if (!item) {
-      return res.status(404).json({ status: false, message: 'Ekadashi info not found' });
-    }
+    if (!item) return res.status(404).json({ status: false, message: 'Ekadashi info not found' });
 
     res.json({
       status: true,
       data: {
-        id: item._id,
-        name: item.name,
-        name_hi: item.name_hi,
-        name_ru: item.name_ru,
-        name_en: item.name_en,
-        description_ru: item.description_ru,
-        description_hi: item.description_hi,
-        description_en: item.description_en,
-        createdAt: item.createdAt,
-        updatedAt: item.updatedAt
+        ...item,
+        id: item._id
       }
     });
   } catch (err) {
@@ -72,16 +62,12 @@ export const getByName = async (req, res) => {
   try {
     const name = req.query.name || req.params.name;
 
-    if (!name) {
-      return res.status(400).json({ status: false, message: 'Name is required' });
-    }
+    if (!name) return res.status(400).json({ status: false, message: 'Name is required' });
 
     const regex = new RegExp(`^${name.trim()}$`, 'i');
     const item = await EkadashInfo.findOne({ name: regex }).lean();
 
-    if (!item) {
-      return res.status(404).json({ status: false, message: 'Ekadashi info not found' });
-    }
+    if (!item) return res.status(404).json({ status: false, message: 'Ekadashi info not found' });
 
     res.json({
       status: true,
