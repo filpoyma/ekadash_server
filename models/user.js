@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const Schema = mongoose.Schema;
 
-const citySchema = new Schema(
+const userSchema = new Schema(
   {
     deviceId: {
       type: String,
@@ -18,6 +18,30 @@ const citySchema = new Schema(
       type: String,
       required: true,
       trim: true
+    },
+    geo: {
+      lan: {
+        type: Number,
+        required: false,
+        default: null
+      },
+      long: {
+        type: Number,
+        required: false,
+        default: null
+      },
+      city: {
+        type: Schema.Types.ObjectId,
+        ref: 'City',
+        required: false,
+        default: null
+      },
+      country: {
+        type: Schema.Types.ObjectId,
+        ref: 'Country',
+        required: false,
+        default: null
+      }
     },
     email: {
       type: String,
@@ -43,4 +67,4 @@ const citySchema = new Schema(
   { timestamps: true }
 );
 
-export default mongoose.model('User', citySchema);
+export default mongoose.model('User', userSchema);

@@ -1,11 +1,36 @@
 import User from '../models/user.js';
-import { sendPushNotification } from './notifications/api.notifications.js';
+
+const getLocalizedName = (entity, language) => {
+  if (!entity) return null;
+
+  const normalizedLanguage = typeof language === 'string' ? language.trim() : '';
+  const translations = entity.translations ?? {};
+
+  if (normalizedLanguage && typeof translations[normalizedLanguage] === 'string') {
+    return translations[normalizedLanguage];
+  }
+
+  return entity.name ?? null;
+};
 
 export const getUser = async (req, res) => {
-  const { deviceId } = req.params;
+  const { deviceId, language } = res.locals;
   try {
-    let user = await User.findOne({ deviceId }, null, { lean: true });
-    if (user) return res.json(user);
+    const user = await User.findOne({ deviceId })
+      .populate('geo.city', 'name translations')
+      .populate('geo.country', 'name translations')
+      .lean();
+
+    if (user) {
+      if (user.geo?.city && typeof user.geo.city === 'object') 
+        user.geo.city = getLocalizedName(user.geo.city, language);
+      
+      if (user.geo?.country && typeof user.geo.country === 'object') 
+        user.geo.country = getLocalizedName(user.geo.country, language);
+      
+      return res.json(user);
+    }
+
     res.json(null);
   } catch (err) {
     console.error('Error get User:', err);
