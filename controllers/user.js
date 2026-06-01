@@ -34,19 +34,19 @@ const mergeGeo = (currentGeo, incomingGeo) => {
     lan: currentGeoObject.lan ?? null,
     long: currentGeoObject.long ?? null,
     city: currentGeoObject.city ?? null,
-    country: currentGeoObject.country ?? null,
+    country: currentGeoObject.country ?? null
   };
   if (!incomingGeo || typeof incomingGeo !== 'object') return base;
   const merged = { ...base };
-  for (const key of ['lan', 'long', 'city', 'country']) {
+  for (const key of ['lan', 'long', 'city', 'country'])
     if (Object.prototype.hasOwnProperty.call(incomingGeo, key)) merged[key] = incomingGeo[key];
-  }
-  if (Object.prototype.hasOwnProperty.call(incomingGeo, 'cityId')) {
+
+  if (Object.prototype.hasOwnProperty.call(incomingGeo, 'cityId'))
     merged.city = incomingGeo.cityId ? incomingGeo.cityId : null;
-  }
-  if (Object.prototype.hasOwnProperty.call(incomingGeo, 'countryId')) {
+
+  if (Object.prototype.hasOwnProperty.call(incomingGeo, 'countryId'))
     merged.country = incomingGeo.countryId ? incomingGeo.countryId : null;
-  }
+
   return merged;
 };
 

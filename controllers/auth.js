@@ -32,11 +32,17 @@ const getUserWithLocalizedGeo = async ({ deviceId, language }) => {
 export const signUp = async (req, res) => {
   const { deviceId, language, timezone } = req.body;
   try {
-    let user = await User.findOne({ deviceId }, null, { lean: true });
-    if (user) return res.json(user);
-    user = new User({ deviceId, language, timezone });
+    const existing = await User.findOne({ deviceId }).lean();
+    if (existing) {
+      const user = await getUserWithLocalizedGeo({
+        deviceId,
+        language: language || res.locals.language
+      });
+      return res.json(user);
+    }
+    const user = new User({ deviceId, language, timezone });
     await user.save();
-    res.json(user);
+    res.json(user.toObject());
   } catch (err) {
     logger.error(`Error create User: ${err}`);
     res.status(500).send(`Error create User: ${err.message}`);

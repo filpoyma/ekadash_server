@@ -96,3 +96,5 @@ Missing features, bugs, and technical improvements. No code changes were made; t
 - **API versioning:** Base path is already `/ekadash_api/v1`; document versioning policy for future v2.
 - **Validation:** Consider request validation (e.g. query/body schema) for ekadash and city endpoints.
 - **Tests:** Add tests for auth, user, ekadash, and city endpoints using the current server code and no front path imports.
+
+сделать онбоардинг DONE через БД. сейчас - через локал стор
