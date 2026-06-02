@@ -8,6 +8,7 @@ import ekadashRouter from './ekadash.js';
 import ekadashInfoRouter from './ekadashInfo.js';
 import cityRouter from './city.js';
 import countryRouter from './country.js';
+import appRouter from './app.js';
 import setLanguage from '../middlewares/setLanguage.js';
 
 const router = express.Router();
@@ -35,5 +36,6 @@ router.use('/ekadash', ekadashRouter);
 router.use('/ekadash-info', ekadashInfoRouter);
 router.use('/city', cityRouter);
 router.use('/country', countryRouter);
+router.use('/app', appRouter);
 
 export default router;
