@@ -2,7 +2,7 @@ const appVersions = {
   ios: {
     minVersion: '1.0.5',
     latestVersion: '1.0.5',
-    storeUrl: ''
+    storeUrl: 'itms-apps://apps.apple.com/app/id6777604021'
   },
   android: {
     minVersion: '1.0.8',
